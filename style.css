@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header{
+    height: 80px;
+    background-color: white;
+    /* border-width: 4px;
+    border-color: black; */
+    /* Rectangle 1 */
+border: 1px solid #000000;
+
+}
+.header-svglogotip1{
+    width: 93px;
+    height: 38.15px;
+    padding-left: 175px;
+    padding-top: 21px;
+}
+.header-ul{
+    display: flex;
+    position: absolute;
+    top: 32px;
+    left: 349px;
+/* font-family: Montserrat Alternates;
+font-weight: Regular;
+font-size: 12px;
+line-height: auto;
+letter-spacing: 0; */
+/* Наша команда */
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: #000000;
+
+
+}
+.header-ul-li{
+    position: static;
+
+}
+.header-ul-li2{
+    position: static;
+    margin-left: 50px;
+}
+.header-greetings{
+    /* Вітаємо, User! */
+
+position: absolute;
+width: 94px;
+height: 15px;
+left: 1171px;
+top: 33px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+text-align: right;
+
+color: #000000;
+
+
+}
+.left-background{
+    background-image: url(./PNGS/background1.jpg);
+    width: 100vw;
+    height: 3456px;
+}
