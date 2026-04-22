@@ -194,8 +194,44 @@ flex-grow: 0;
 }
  
 .visokosnyi-year-answer1{
+/* Ви народилися у високосний рік! */
+
+position: absolute;
+/* width: 212px; */
+height: 15px;
+left: 796px;
+top: 310px;
+z-index: 10;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+text-align: right;
+
+color: #039900;
+
 
 }
 .visokosnyi-year-answer2{
-    
+    /* Ви народилися не у високосний рік! */
+
+position: absolute;
+width: 230px;
+height: 15px;
+left: 603px;
+top: 33px;
+z-index: 10;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+text-align: right;
+
+color: #990000;
+
+
 }
