@@ -220,8 +220,8 @@ color: #039900;
 position: absolute;
 width: 230px;
 height: 15px;
-left: 603px;
-top: 33px;
+left: 796px;
+top: 310px;
 z-index: 10;
 font-family: 'Montserrat Alternates';
 font-style: normal;
@@ -230,8 +230,11 @@ font-size: 12px;
 line-height: 15px;
 /* identical to box height */
 text-align: right;
-
+display: none;
 color: #990000;
 
 
+}
+.visokosnyi-year-underline{
+    
 }
