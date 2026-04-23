@@ -142,7 +142,7 @@ box-shadow: 8px 8px 0px 3px rgba(0,0,0,0.58);
 z-index: 10;
 } */
 .visokosnyi-year-input{
-    
+    background-color: #D7D7D7;
     position: absolute;
     top: 300px;
     left: 432px;
@@ -183,6 +183,7 @@ flex-grow: 0;
     height: 35px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    background-color: #000000;
 }
 .visokosnyi-year-search-svg{
     width: 15px;
@@ -236,5 +237,274 @@ color: #990000;
 
 }
 .visokosnyi-year-underline{
-    
+      width: 536px;
+    height: 1px;
+    background-color: #000000;
+    z-index: 10;
+    top: 400px;
+    left: 450px;
+    position: absolute;
+}
+.random{
+  position: absolute;
+  top: 180px;
+  z-index: 10;
+  left: 0;
+}
+.random-zag{
+    width: 100vw;
+    position: absolute;
+width: 283px;
+height: 20px;
+left: 578px;
+top: 250px;
+z-index: 10;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+white-space: nowrap;
+color: #000000;
+}
+.random-input::placeholder{
+     width: 160px;
+height: 15px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+padding-left: 6px;
+color: #7E7E7E;
+
+z-index: 11;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.random-input{
+       background-color: #D7D7D7;
+    position: absolute;
+    top: 300px;
+    left: 432px;
+    z-index: 10;
+    width: 115px;
+    height: 35px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.random-search-button{
+     position: absolute;
+    top: 300px;
+    left: 545px;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #000000;
+}
+.random-search-svg{
+      width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 310px;
+    left: 553px;
+    z-index: 11;
+}
+.random-answer1{
+/* Ви народилися у високосний рік! */
+ white-space: nowrap;
+position: absolute;
+/* width: 212px; */
+height: 15px;
+left: 796px;
+top: 310px;
+z-index: 10;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+text-align: right;
+
+color: #039900;
+
+
+}
+.random-answer2{
+    /* Ви народилися не у високосний рік! */
+ white-space: nowrap;
+position: absolute;
+width: 230px;
+height: 15px;
+left: 796px;
+top: 310px;
+z-index: 10;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+text-align: right;
+display: none;
+color: #990000;
+
+
+}
+.K-N-P-zag{
+    /* Камінь - ножиці - папір */
+
+position: absolute;
+width: 195px;
+height: 20px;
+left: 622px;
+top: 630px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+z-index: 10;
+color: #000000;
+
+ white-space: nowrap;
+}
+.K-N-P-svgUl{
+    display: flex;
+    position: absolute;
+    top: 690px;
+    left: 600px;
+    z-index: 10;
+}
+.K-N-P-svgUl-li{
+    width: 60px;
+    height: 60px;
+}
+.K-N-P-svgUl-li2{
+    margin-left: 38px;
+}
+.K-N-P-scoreUl{
+    position: absolute;
+    z-index: 10;
+    top: 700px;
+    right: 450px;
+    /* Рахунок: Комп’ютер - 0 Ви - 0 */
+
+
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 170%;
+/* or 20px */
+
+color: #000000;
+
+
+}
+.K-N-P-answer2{
+    /* Комп’ютер виграв раунд! */
+
+position: absolute;
+z-index: 10;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+left: 660px;
+top: 800px;
+color: #990000;
+display: none;
+
+}
+.K-N-P-answer1{
+    /* Комп’ютер виграв раунд! */
+
+position: absolute;
+z-index: 10;
+
+/* Ви виграли раунд! */
+
+position: absolute;
+
+left: 675px;
+top: 800px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: #039900;
+
+
+}
+.K-N-P-button{/* Варіант комп’ютера */
+background-color: #000000;
+width: 182px;
+height: 35px;
+border-radius: 20px;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+z-index: 10;
+color: #FFFFFF;
+top: 850px;
+left: 650px;
+position: absolute;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}
+.K-N-P-underline{
+       width: 536px;
+    height: 1px;
+    background-color: #000000;
+    z-index: 10;
+    top: 920px;
+    left: 480px;
+    position: absolute;
+}
+.calculator-megaUl{
+    display: flex;
+    position: absolute;
+    z-index: 10;
+    top: 1000px;
+    left: 400px;
+}
+.calculator-megaUl-input1{
+      background-color: #D7D7D7;
+    position: absolute;
+    /* top: -2400px;
+    left: 432px; */
+    z-index: 10;
+    width: 115px;
+    height: 35px;
+   border-radius: 20px;
+   border-style: none;
+}
+.calculator-megaUl-input1::placeholder{
+  padding-left: 12px;
 }
