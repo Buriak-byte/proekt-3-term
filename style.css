@@ -491,7 +491,7 @@ flex-grow: 0;
     display: flex;
     position: absolute;
     z-index: 10;
-    top: 1000px;
+    top: 1100px;
     left: 400px;
 }
 .calculator-megaUl-input1{
@@ -588,5 +588,128 @@ flex-grow: 0;
    border-style: none;
 }
 .calculator-megaUl-input3::placeholder{
-    padding-left: 5px;
+    padding-left: 23px;
+}
+.calculator-zag{
+    /* Калькулятор */
+
+position: absolute;
+width: 119px;
+height: 20px;
+left: 690px;
+top: 1000px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+color: #000000;
+
+z-index: 10;
+}
+.calculator-underline{
+       width: 536px;
+    height: 1px;
+    background-color: #000000;
+    z-index: 10;
+    top: 1200px;
+    left: 480px;
+    position: absolute;
+}
+.timeCalculator-zag{
+      width: 100vw;
+    position: absolute;
+width: 283px;
+height: 20px;
+left: 673px;
+top: 1250px;
+z-index: 10;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+white-space: nowrap;
+color: #000000;
+}
+
+.timeCalculator-input::placeholder{
+     width: 160px;
+height: 15px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+padding-left: 6px;
+color: #7E7E7E;
+
+z-index: 11;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.timeCalculator-input{
+       background-color: #D7D7D7;
+    position: absolute;
+    top: 1300px;
+    left: 500px;
+    z-index: 10;
+    width: 135px;
+    height: 35px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.timeCalculator-search-button{
+    position: absolute;
+    top: 1300px;
+    left: 615px;
+    z-index: 10;
+    width: 35px;
+    height: 35px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #000000;
+}
+.timeCalculator-search-svg{
+       width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 1310px;
+    left: 623px;
+    z-index: 11;
+}
+.timeCalculator-points{
+    position: absolute;
+    top: 1320px;
+z-index: 10;
+
+left: 700px;
+}
+timeCalculator-timer{
+    /* 3 дн. 15:45:01 */
+
+position: absolute;
+width: 76px;
+height: 15px;
+left: 803px;
+top: 1107px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: #000000;
+
+z-index: 10;
 }
