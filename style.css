@@ -700,16 +700,72 @@ position: absolute;
 width: 76px;
 height: 15px;
 left: 803px;
-top: 1107px;
+top: 0px;
 
 font-family: 'Montserrat Alternates';
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 15px;
-/* identical to box height */
+
 
 color: #000000;
 
 z-index: 10;
+}
+.timeCalculator-timer{
+    position: absolute;
+    top: 1320px;
+z-index: 10;
+
+left: 800px;
+
+
+    /* 3 дн. 15:45:01 */
+
+position: absolute;
+width: 76px;
+height: 15px;
+left: 850px;
+top: 1315px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+
+
+color: #000000;
+
+z-index: 10;
+}
+.timeCalculator-underline{
+      width: 536px;
+    height: 1px;
+    background-color: #000000;
+    z-index: 10;
+    top: 1400px;
+    left: 480px;
+    position: absolute;
+}
+.dinosaur-zag{
+    /* Google динозавр */
+white-space: nowrap;
+position: absolute;
+width: 145px;
+height: 20px;
+left: 680px;
+top: 1450px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+z-index: 10;
+color: #000000;
+
+
 }
