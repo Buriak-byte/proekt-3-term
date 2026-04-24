@@ -500,11 +500,93 @@ flex-grow: 0;
     /* top: -2400px;
     left: 432px; */
     z-index: 10;
-    width: 115px;
+    width: 135px;
     height: 35px;
    border-radius: 20px;
    border-style: none;
 }
 .calculator-megaUl-input1::placeholder{
-  padding-left: 12px;
+  padding-left: 23px;
+}
+.calculator-megaUl-input3{
+    left: 450px;
+      background-color: #D7D7D7;
+    position: absolute;
+    z-index: 10;
+    width: 115px;
+    height: 35px;
+   border-radius: 20px;
+   border-style: none;
+}
+.calculator-megaUl-input2::placeholder{
+    padding-top: 5px;
+    padding-left: 12px;
+}
+.calculator-megaUl-input2{
+     left: 230px;
+      background-color: #D7D7D7;
+    position: absolute;
+   
+    z-index: 10;
+    width: 115px;
+    height: 35px;
+   border-radius: 20px;
+   border-style: none;
+}
+.calculator-megaul-operatorsUl{
+    position: absolute;
+    left: 150px;
+    bottom: -53px;
+    
+}
+.calculator-megaUl-dorivnue{
+    left: 400px;
+    position: absolute;
+}
+.calculator-megaul-operatorsUl-plusik{
+    display: flex;
+     margin-top: 15px;
+}
+.calculator-megaul-operatorsUl-minusik{
+    display: flex;
+    padding-top: 10px;
+}
+.calculator-megaul-operatorsUl-operator{
+    background-color: black;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    color: white;
+  
+}
+.calculator-megaul-operatorsUl-operator-p{
+    padding-top: 4px;
+    padding-left: 8px;
+}
+.calculator-megaul-operatorsUl-operator-2{
+   margin-left: 10px;
+}
+.calculator-megaUl-dorivnue-operator{
+        background-color: black;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+    color: white;
+    position: absolute;
+        top: 5px;
+        left: -15px;
+}
+.calculator-megaUl-input3{
+      left: 465px;
+      background-color: #D7D7D7;
+    position: absolute;
+   
+    z-index: 10;
+    width: 115px;
+    height: 35px;
+   border-radius: 20px;
+   border-style: none;
+}
+.calculator-megaUl-input3::placeholder{
+    padding-left: 5px;
 }

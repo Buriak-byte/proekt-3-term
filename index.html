@@ -37,7 +37,7 @@
         <section class="visokosnyi-year">
 <p class="visokosnyi-year-zag">Перевір в який рік ти народився</p>
 <!-- <div class="visokosnyi-year-input-shadow"> -->
-    <input class="visokosnyi-year-input" type="search" placeholder="Введіть рік народження">
+    <input class="visokosnyi-year-input" type="search" autocomplete="off" placeholder="Введіть рік народження">
 <input type="submit" name="" value="" class="visokosnyi-year-search-button">
 <svg class="visokosnyi-year-search-svg">
     <use href="./SVGS/search-icon.svg"></use>
@@ -130,19 +130,19 @@
         <section class="calculator">
             <ul class="calculator-megaUl">
                 <li><input class="calculator-megaUl-input1" type="text" placeholder="Введіть число"></li>
-            <li>
-                <ul>
-                    <li>+</li>
-                    <li>*</li>
+            <li class="calculator-megaul-operatorsUl">
+                <ul class="calculator-megaul-operatorsUl-plusik">
+                    <li class="calculator-megaul-operatorsUl-plus calculator-megaul-operatorsUl-operator"><p class="calculator-megaul-operatorsUl-operator-p">+</p></li>
+                    <li class="calculator-megaul-operatorsUl-mnozhennya calculator-megaul-operatorsUl-operator calculator-megaul-operatorsUl-operator-2"><p class="calculator-megaul-operatorsUl-operator-p">*</p></li>
                 </ul>
-                <ul>
-                    <li>-</li>
-                    <li>/</li>
+                <ul class="calculator-megaul-operatorsUl-minusik">
+                    <li class="calculator-megaul-operatorsUl-minus calculator-megaul-operatorsUl-operator"><p class="calculator-megaul-operatorsUl-operator-p">-</p></li>
+                    <li class="calculator-megaul-operatorsUl-dilennya calculator-megaul-operatorsUl-operator calculator-megaul-operatorsUl-operator-2"><p class="calculator-megaul-operatorsUl-operator-p">/</p></li>
                 </ul>
             </li>
-                <li><input type="text" placeholder="Введіть число"></li>
-                <li><button>=</button></li>
-                <li><input type="number" placeholder="Результат"></li>
+                <li><input class="calculator-megaUl-input2" type="text" placeholder="Введіть число"></li>
+                <li class="calculator-megaUl-dorivnue"><button class="calculator-megaUl-dorivnue-operator">=</button></li>
+                <li><input class="calculator-megaUl-input3" type="text" placeholder="Результат"></li>
             </ul>
         </section>
     </main>
