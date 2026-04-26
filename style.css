@@ -1082,12 +1082,12 @@ position: static;
     top: 2900px;
     left: 460px;
 }
-.last-people ul:not(:first-child){
+.last-people ul>li>ul:not(:first-child){
    margin-top: 36px;
 }
 .last-zag{
     /* Обери вченого/их */
-
+    
 position: absolute;
 top: 2850px;
 left: 675px;
@@ -1101,5 +1101,62 @@ line-height: 20px;
 
 color: #000000;
 
+
+}
+.last-buttons{
+    position: absolute;
+    z-index: 10;
+    top: 3250px;
+    left: 300px;
+}
+.last-buttons-button{
+    background-color: #000000;
+    height: 35px;
+    color: white;
+    border-radius: 20px;
+    /* Які вчені народилися в 19 ст. */
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+text-align: right;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.last-buttons-group{
+    display: flex;
+}
+.last-buttons-group li:not(:first-child){
+    position: static;
+    margin-left: 490px;
+    white-space: nowrap;
+}
+.last-buttons-group li:not(:last-child){
+position: absolute;
+    white-space: nowrap;
+right: 555px;
+}
+.last-buttons li:not(:first-child){
+    position:static;
+    margin-top: 0px;
+
+
+}
+.last-buttons-button-izgoy{
+    position: absolute;
+    right: 255px;
+    white-space: nowrap;
+}
+.last-buttons-li ul:not(:first-child{})
 
 }
