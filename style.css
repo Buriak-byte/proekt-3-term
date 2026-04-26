@@ -760,7 +760,7 @@ top: 1450px;
 
 font-family: 'Montserrat Alternates';
 font-style: normal;
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 20px;
 /* identical to box height */
@@ -768,4 +768,184 @@ z-index: 10;
 color: #000000;
 
 
+}
+.dinosaur-fon{
+    position: absolute;
+    z-index: 10;
+    height: 241px;
+width: 720px;
+top: 1450px;
+left: 390px;
+}
+.dinosaur-unit{
+    position: absolute;
+    top: 1580px;
+    left: 450px;
+    width: 65px;
+    height: 65px;
+    z-index: 10;
+}
+.dinosaur-underline{
+       width: 536px;
+    height: 1px;
+    background-color: #000000;
+    z-index: 10;
+    top: 1780px;
+    left: 480px;
+    position: absolute;
+}
+.football-zag{
+    
+z-index: 10;
+position: absolute;
+width: 74px;
+height: 20px;
+left: 700px;
+top: 1850px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+color: #000000;
+
+
+}
+.football-field{
+    position: absolute;
+    z-index: 10;
+    width: 720px;
+    height: 220px;
+    top: 1900px;
+  left: 390px;
+  background-color: #5ABB58;
+  border-radius: 37px;
+  
+}
+.football-ball{
+     position: absolute;
+    top: 1980px;
+    left: 520px;
+    width: 50px;
+    height: 50px;
+    z-index: 11;
+}
+.football-corsor{
+      position: absolute;
+    top: 2000px;
+    left: 920px;
+    width: 22px;
+    height: 22px;
+    z-index: 11;
+}
+.dinosaur-underline{
+       width: 536px;
+    height: 1px;
+    background-color: #000000;
+    z-index: 10;
+    top: 2150px;
+    left: 480px;
+    position: absolute;
+}
+.biggestNum-zag{
+    /* Введіть 3 числа */
+z-index: 10;
+position: absolute;
+width: 141px;
+height: 20px;
+left: 660px;
+top: 2200px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+color: #000000;
+
+
+}
+.biggestNum-inputs{
+    position: absolute;
+    top: 2300px;
+    left: 500px;
+    display: flex;
+    z-index: 10;
+}
+
+.biggestNum-input{
+    width: 135px;
+    height: 35px;
+    background-color: #D7D7D7;
+    border-radius: 20px;
+    border-style: none;
+}
+.biggestNum-input-2{
+margin-left: 38px;
+}
+.biggestNum-input-3{
+   margin-left: 38px;
+}
+
+.biggestNum-input::placeholder{
+ /* Введіть число */
+
+width: 95px;
+height: 15px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: #7E7E7E;
+
+padding-left: 19px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.biggestNum-result{
+/* Найбільше число, яке ви ввели - (число) */
+
+position: absolute;
+width: 252px;
+height: 15px;
+left: 594px;
+top: 2370px;
+z-index: 10;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+white-space: nowrap;
+color: #000000;
+
+
+}
+.biggestNum-underline{
+        width: 536px;
+    height: 1px;
+    background-color: #000000;
+    z-index: 10;
+    top: 2430px;
+    left: 480px;
+    position: absolute;
+}
+.students-arrows{
+    position: absolute;
+    top: 2500px;
+    z-index: 10;
+    left: 400px;
 }
