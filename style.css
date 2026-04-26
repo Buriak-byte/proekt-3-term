@@ -398,7 +398,7 @@ color: #000000;
     z-index: 10;
     top: 700px;
     right: 450px;
-    /* Рахунок: Комп’ютер - 0 Ви - 0 */
+    /* Рахунок: Комп’ютер - 0Ви - 0 */
 
 
 
@@ -948,4 +948,158 @@ color: #000000;
     top: 2500px;
     z-index: 10;
     left: 400px;
+}
+.students-arrows-li2{
+     position: absolute;
+    z-index: 10;
+left: 560px;
+bottom: 0;
+}
+.students-arrows-li-style{
+    border-style: none;
+    background: none;
+     height: 150px;
+    width: 150px;
+    border-radius: 20px;
+}
+.students-imgs{
+    position: absolute;
+    z-index: 10;
+    top: 2490px;
+    left: 675px;
+}
+.students-imgs-img{
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;
+    position: absolute;
+}
+.students-names{
+      position: absolute;
+    z-index: 10;
+    top: 2665px;
+    left: 725px;
+}
+.student-name{
+    position: inherit;
+    z-index: inherit;
+    top: 0;
+    left: 0;
+    /* Ім’я студента */
+
+
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+color: #000000;
+
+
+}
+.students-names li:not(:first-child){
+    display: none;
+}
+.students-jobs{
+     position: absolute;
+    z-index: 10;
+    top: 2690px;
+    left: 680px;
+}
+.students-job{
+    top: 0;
+    left: 0;
+    position: inherit;
+    z-index: inherit;
+    white-space: nowrap;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: #000000;
+
+
+}
+.students-jobs li:not(:first-child){
+    display: none;
+}
+.students-order{
+    width: 18px;
+    z-index: inherit;
+    height: 3px;
+    background-color: #D9D9D9;
+}
+.students-orders{
+    position: absolute;
+    display: flex;
+z-index: 10;
+top: 2750px;
+left: 670px;
+}
+.students-orders li:not(:first-child){
+    margin-left: 6px;
+}
+.students-underline{
+      width: 536px;
+    height: 1px;
+    background-color: #000000;
+    z-index: 10;
+    top: 2800px;
+    left: 480px;
+    position: absolute;
+}
+.last-human{
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+     border-radius: 20px;
+    /* position: absolute; */
+}
+.last-human-button{
+    border-style: none;
+    background: none;
+}
+.last-people-group{
+    display: flex;
+z-index: 10;
+position: static;
+
+}
+.last-people-group li:not(:first-child){
+    margin-left: 59px;
+    z-index: 10;
+   
+}
+.last-people{
+    z-index: 10;
+    position: absolute;
+    top: 2900px;
+    left: 460px;
+}
+.last-people ul:not(:first-child){
+   margin-top: 36px;
+}
+.last-zag{
+    /* Обери вченого/их */
+
+position: absolute;
+top: 2850px;
+left: 675px;
+z-index: 10;
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+color: #000000;
+
+
 }

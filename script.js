@@ -6,8 +6,10 @@ const visokosnyiYearAnswer1 = document.querySelector(
 visokosnyiYearInput.addEventListener("input", (e) => {
   if (leapYear(e.target.value)) {
     visokosnyiYearAnswer1.textContent = "leap Year";
+    visokosnyiYearAnswer1.style.color = "#039900";
   } else {
     visokosnyiYearAnswer1.textContent = "not leap Year";
+    visokosnyiYearAnswer1.style.color = "#990000";
   }
 });
 function leapYear(year) {
