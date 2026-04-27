@@ -1,5 +1,8 @@
 
-
+body{height: 3550px;
+    box-sizing: border-box;
+    
+}
 *{
     margin: 0;
     padding: 0;
@@ -1165,4 +1168,24 @@ right: 555px;
 .last-buttons-group2{
     margin-top: 20px;
     position: static;
+}
+.footer{
+    position: absolute;
+    height: 220px;
+    background-color: white;
+    width: 100vw;
+    top: 3650px;
+    box-sizing: border-box
+}
+.footer-megaUl{
+    display: flex;
+    position: static;
+}
+.footer-megaUl-li1{
+    margin-left: 175px;
+    margin-top: 75px;
+}
+.footer-megaUl-li1{
+    margin-left: 175px;
+    margin-top: 75px;
 }
