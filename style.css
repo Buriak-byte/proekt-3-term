@@ -64,7 +64,6 @@ font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 15px;
-/* identical to box height */
 text-align: right;
 
 color: #000000;
@@ -1185,7 +1184,100 @@ right: 555px;
     margin-left: 175px;
     margin-top: 75px;
 }
-.footer-megaUl-li1{
-    margin-left: 175px;
-    margin-top: 75px;
+.footer-megaUl-li2{
+    margin-left: 185px;
+    margin-top: 61px;
+    /* Тел: +38 (123) 456 78 90 E-Mail: codingmagic@gmail.com Facebook: CodingMagic Twitter: CodingMagic Instagram: CodingMagic */
+
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 170%;
+/* or 20px */
+
+color: #000000;
+
+
+}
+.footer-megaUl-li3{
+    margin-left: 186px;
+    margin-top: 97px;
+}
+.footer-megaUl-li3-input{
+    width: 204px;
+    height: 35px;
+    background-color: #D7D7D7;
+    border-radius: 20px;
+    border-style: none;
+}
+.footer-megaUl-li3-input::placeholder{
+ /* Ваша ел. адреса... */
+
+width: 114px;
+height: 15px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+padding-left: 10px;
+color: #7E7E7E;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.footer-megaUl-li3-button{
+    background-color: black;
+    border-radius: 20px;
+    margin-left: 36px;
+    /* Підписатись */
+
+width: 87px;
+height: 35px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+/* flex: none;
+order: 0;
+flex-grow: 0; */
+
+}
+.footer-subscribing{
+    display: flex;
+}
+.footer-megaUl-li3-li2{
+    width: 107px;height: 35px;
+}
+.footer-p{
+    /* *Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті */
+
+
+margin-top: 18px;
+
+font-family: 'Montserrat Alternates';
+font-style: normal;
+font-weight: 400;
+font-size: 6px;
+line-height: 7px;
+
+color: #000000;
+
+
 }
