@@ -187,11 +187,24 @@ console.log(yearsOfAlbertEnstein(scientists))
 
 
 
-
 function StartC(scientists) {
-  scientists.filter((scientist) => {
-   return scientist.surname.includes("C")
+  return scientists.filter((scientist) => {
+    return scientist.surname.startsWith("C");
   });
-  return StartC
-} 
-console.log(StartC(scientists))
+}
+
+console.log(StartC(scientists));
+// function StartC(scientists) {
+//   scientists.filter((scientist) => {
+//    return scientist.surname.includes("C")
+//   });
+//   return StartC
+// } 
+// console.log(StartC(scientists))
+function deleteA(scientists){
+const UNdeletedscientists = scientists.filter((UNdelited) => {
+    return !UNdelited.name.startsWith("A")
+  });
+return UNdeletedscientists;
+}
+console.log(deleteA(scientists))
