@@ -32,21 +32,7 @@ function leapYear(year) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let computersNumber = Math.random() * 10
 
 
 
@@ -164,28 +150,25 @@ function orderYears(scientists) {
   const orderYearsArr = scientists.sort((a, b) => {
     const lifeYearsA = a.dead - a.born;
     const lifeYearsB = b.dead - b.born;
-    return lifeYearsA - lifeYearsB
+    return lifeYearsA - lifeYearsB;
   });
   return orderYearsArr;
 }
 console.log(orderYears(scientists));
-function futureborned(scientists){
-   const orderYearsArr = scientists.sort((a, b) => {
-
-     return b.born - a.born;
-   });
-   return orderYearsArr[0];
-} 
-console.log(futureborned(scientists));
-function yearsOfAlbertEnstein(scientists){
-  const AlbertEnsteinYears = scientists.find((AlbertEnstein) => {
-    return AlbertEnstein.born === 1879;})
-return AlbertEnsteinYears.born
+function futureborned(scientists) {
+  const orderYearsArr = scientists.sort((a, b) => {
+    return b.born - a.born;
+  });
+  return orderYearsArr[0];
 }
-console.log(yearsOfAlbertEnstein(scientists))
-
-
-
+console.log(futureborned(scientists));
+function yearsOfAlbertEnstein(scientists) {
+  const AlbertEnsteinYears = scientists.find((AlbertEnstein) => {
+    return AlbertEnstein.born === 1879;
+  });
+  return AlbertEnsteinYears.born;
+}
+console.log(yearsOfAlbertEnstein(scientists));
 
 function StartC(scientists) {
   return scientists.filter((scientist) => {
@@ -199,12 +182,96 @@ console.log(StartC(scientists));
 //    return scientist.surname.includes("C")
 //   });
 //   return StartC
-// } 
+// }
 // console.log(StartC(scientists))
-function deleteA(scientists){
-const UNdeletedscientists = scientists.filter((UNdelited) => {
-    return !UNdelited.name.startsWith("A")
+function deleteA(scientists) {
+  const UNdeletedscientists = scientists.filter((UNdelited) => {
+    return !UNdelited.name.startsWith("A");
   });
-return UNdeletedscientists;
+  return UNdeletedscientists;
 }
-console.log(deleteA(scientists))
+console.log(deleteA(scientists));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const scientistsBorningConstA = scientists.sort((a, b) => {
+  return a.born - b.born;
+});
+const scientistsBorningConstB = scientists.sort((a, b) => {
+  return b.born - a.born;
+});
+
+
+function scientistsBorning(scientists,minusA,minusB) {
+return scientistsBorningConstA[0], scientistsBorningConstB[0]
+}
+console.log(
+  scientistsBorning(
+    scientists,
+    scientistsBorning.minusA,
+    scientistsBorning.minusB,
+  ),
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function similarLitters(scientists){
+  const similarLittersScintists = scientists.filter((scientist) => {
+    let someLetterName = scientist.indexOf(0)
+    let someLetterSurname = someLetterName
+    return 
+  })
+  return similarLittersScintists
+}
+console.log(similarLitters(scientists))
+
+
+
+
+
+
+
+
+
+
