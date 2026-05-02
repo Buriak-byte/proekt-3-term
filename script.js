@@ -32,9 +32,20 @@ function leapYear(year) {
 
 
 
-let computersNumber = Math.random() * 10
+let computersNumber = Math.floor(Math.random() * 10);
+let userNumber = document.querySelector(".random-input");
+const answer1 = document.querySelector(".random-answer1");
+const answer2 = document.querySelector(".random-answer2");
 
-
+userNumber.addEventListener("input", (input) => {
+  if (Number(input.target.value) === computersNumber && input.target.value) {
+    answer1.style.display = "block";
+    answer2.style.display = "none";
+  } else {
+    answer1.style.display = "none";
+    answer2.style.display = "block";
+  }
+});        
 
 
 
@@ -256,15 +267,15 @@ console.log(
 
 
 
-function similarLitters(scientists){
-  const similarLittersScintists = scientists.filter((scientist) => {
-    let someLetterName = scientist.indexOf(0)
-    let someLetterSurname = someLetterName
-    return 
-  })
-  return similarLittersScintists
-}
-console.log(similarLitters(scientists))
+// function similarLitters(scientists){
+//   const similarLittersScintists = scientists.filter((scientist) => {
+//     let someLetterName = scientist.indexOf(0)
+//     let someLetterSurname = someLetterName
+//     return 
+//   })
+//   return similarLittersScintists
+// }
+// console.log(similarLitters(scientists))
 
 
 
