@@ -1,20 +1,30 @@
 const visokosnyiYearInput = document.querySelector(".visokosnyi-year-input");
 console.log(visokosnyiYearInput);
 const visokosnyiYearAnswer1 = document.querySelector(
-  ".visokosnyi-year-answer1",
-);
+  ".visokosnyi-year-answer1");
+  const visokosnyiyearanswer2 = document.querySelector(
+    ".visokosnyi-year-answer2",
+  );
+  // function leapYear(year) {
+  //   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+  // }
 visokosnyiYearInput.addEventListener("input", (e) => {
-  if (leapYear(e.target.value)) {
-    visokosnyiYearAnswer1.textContent = "leap Year";
+  if (
+    Number(visokosnyiYearInput.textContent % 4 === 0) &&
+   Number(visokosnyiYearInput.textContent % 100 !== 0) ||
+    Number(visokosnyiYearInput.textContent % 400 === 0) &&
+    Number(visokosnyiYearInput.textContent !== 0) ||
+    visokosnyiYearInput.textContent === NaN
+  ) {
+    visokosnyiYearAnswer1.textContent = "це високосний рік!";
+    visokosnyiyearanswer2.style.display = "none";
     visokosnyiYearAnswer1.style.color = "#039900";
-  } else {
-    visokosnyiYearAnswer1.textContent = "not leap Year";
-    visokosnyiYearAnswer1.style.color = "#990000";
+  } else if (Number(visokosnyiYearInput.textContent % 4 !== 0)) {
+    visokosnyiYearAnswer1.style.display = "none";
+    visokosnyiyearanswer2.style.display = "none";
   }
 });
-function leapYear(year) {
-  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-}
+
 
 
 
@@ -41,9 +51,12 @@ userNumber.addEventListener("input", (input) => {
   if (Number(input.target.value) === computersNumber && input.target.value) {
     answer1.style.display = "block";
     answer2.style.display = "none";
-  } else {
+  } else if (Number(input.target.value) !== computersNumber && input.target.value) {
     answer1.style.display = "none";
     answer2.style.display = "block";
+  } else{
+     answer1.style.display = "none";
+     answer2.style.display = "none";
   }
 });        
 
