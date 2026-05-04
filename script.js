@@ -10,16 +10,16 @@ const visokosnyiYearAnswer1 = document.querySelector(
   // }
 visokosnyiYearInput.addEventListener("input", (e) => {
   if (
-    Number(visokosnyiYearInput.textContent % 4 === 0) &&
-   Number(visokosnyiYearInput.textContent % 100 !== 0) ||
-    Number(visokosnyiYearInput.textContent % 400 === 0) &&
-    Number(visokosnyiYearInput.textContent !== 0) ||
-    visokosnyiYearInput.textContent === NaN
+    visokosnyiYearInput.e.target.value % 4 === 0 &&
+      visokosnyiYearInput.e.target.value % 100 !== 0 ||
+    visokosnyiYearInput.e.target.value % 400 === 0
   ) {
     visokosnyiYearAnswer1.textContent = "це високосний рік!";
-    visokosnyiyearanswer2.style.display = "none";
     visokosnyiYearAnswer1.style.color = "#039900";
-  } else if (Number(visokosnyiYearInput.textContent % 4 !== 0)) {
+  } else if (visokosnyiYearInput.e.target.value % 4 !== 0) {
+    visokosnyiYearAnswer1.textContent = "це не високосний рік!";
+    visokosnyiYearAnswer1.style.color = "#990000;";
+  } else {
     visokosnyiYearAnswer1.style.display = "none";
     visokosnyiyearanswer2.style.display = "none";
   }
