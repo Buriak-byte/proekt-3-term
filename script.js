@@ -8,22 +8,155 @@ const visokosnyiYearAnswer1 = document.querySelector(
   // function leapYear(year) {
   //   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
   // }
-visokosnyiYearInput.addEventListener("input", (e) => {
-  if (
-    visokosnyiYearInput.e.target.value % 4 === 0 &&
-      visokosnyiYearInput.e.target.value % 100 !== 0 ||
-    visokosnyiYearInput.e.target.value % 400 === 0
-  ) {
-    visokosnyiYearAnswer1.textContent = "це високосний рік!";
-    visokosnyiYearAnswer1.style.color = "#039900";
-  } else if (visokosnyiYearInput.e.target.value % 4 !== 0) {
-    visokosnyiYearAnswer1.textContent = "це не високосний рік!";
-    visokosnyiYearAnswer1.style.color = "#990000;";
-  } else {
-    visokosnyiYearAnswer1.style.display = "none";
-    visokosnyiyearanswer2.style.display = "none";
-  }
-});
+// visokosnyiYearInput.addEventListener("input", (e) => {
+//   if (
+//     visokosnyiYearInput.e.target.value % 4 === 0 &&
+//       visokosnyiYearInput.e.target.value % 100 !== 0 ||
+//     visokosnyiYearInput.e.target.value % 400 === 0
+//   ) {
+//     visokosnyiYearAnswer1.textContent = "це високосний рік!";
+//     visokosnyiYearAnswer1.style.color = "#039900";
+//   } else if (visokosnyiYearInput.e.target.value % 4 !== 0) {
+//     visokosnyiYearAnswer1.textContent = "це не високосний рік!";
+//     visokosnyiYearAnswer1.style.color = "#990000;";
+//   } else {
+//     visokosnyiYearAnswer1.style.display = "none";
+//     visokosnyiyearanswer2.style.display = "none";
+//   }
+// });
+
+
+
+
+
+
+const calculatormegaUlinput1 = document.querySelector(
+  ".calculator-megaUl-input1",
+);
+const calculatormegaUlinput2 = document.querySelector(
+  ".calculator-megaUl-input2",
+);
+const calculatormegaUlinput3 = document.querySelector(
+  ".calculator-megaUl-input3",
+);
+const dorivnue = document.querySelector(".dorivnue");
+const plus = document.querySelector(".plus");
+const mnozhennia = document.querySelector(".mnozhennia");
+const minus = document.querySelector(".minus");
+const dilennia = document.querySelector(".dilennia");
+console.log(plus, minus, mnozhennia, dilennia)
+
+
+
+
+
+
+let operator = null
+ plus.addEventListener("click", (plus) => {
+  operator = "+"
+   
+ });
+
+ minus.addEventListener("click", (minus) => {
+  operator = "-"
+ });
+ mnozhennia.addEventListener("click", (mnozhennia) => {
+  operator = "*"
+  
+ });
+ dilennia.addEventListener("click", (dilennia) => {
+  operator = "/"
+  console.log(operator);
+ });
+dorivnue.addEventListener("click", (dorivnue) => {
+  const calculatormegaUlinput1Value = Number(calculatormegaUlinput1.value)
+  const calculatormegaUlinput2Value = Number(calculatormegaUlinput2.value);
+  //  console.log(calculatormegaUlinput2Value, calculatormegaUlinput1Value);
+   if (
+     isNaN(calculatormegaUlinput2Value) ||
+     isNaN(calculatormegaUlinput1Value)
+   ) {
+     console.log("напиши число!!!");
+     return
+   }
+   let resultOfCalculator = null
+   switch (operator) {
+     case "+":
+       resultOfCalculator =
+         calculatormegaUlinput1Value + calculatormegaUlinput2Value;
+       break;
+     case "-":
+       resultOfCalculator =
+         calculatormegaUlinput1Value - calculatormegaUlinput2Value;
+       break;
+     case "*":
+       resultOfCalculator =
+         calculatormegaUlinput1Value * calculatormegaUlinput2Value;
+       break;
+     case "/":
+       resultOfCalculator =
+         calculatormegaUlinput1Value / calculatormegaUlinput2Value;
+       break;
+   }
+   console.log(resultOfCalculator)
+ calculatormegaUlinput3.value = resultOfCalculator
+  })
+  
+
+
+
+
+
+
+
+
+
+// function calculator(a, b){
+//  let result = 0
+//   dorivnue.addEventListener("click", (result) => {
+//  plus.addEventListener("click", (plus) => {
+//    if (plus.target.value) {
+//     result = a + b
+  
+//    }
+  
+//  });
+//  minus.addEventListener("click", (minus) => {
+//    if (minus.target.value) {
+//     result = a - b;
+//    }
+
+//  });
+//  mnozhennia.addEventListener("click", (mnozhennia) => {
+//    if (mnozhennia.target.value) {
+//     result = a * b;
+//    }
+  
+//  });
+//  dilennia.addEventListener("click", (dilennia) => {
+//    if (dilennia.target.value) {
+//       result = a / b;
+//    }
+
+//  });
+// return result
+//   })
+//  let result2 = result
+//  return result2
+ 
+// }
+// console.log(calculator(calculatormegaUlinput1.value, calculatormegaUlinput2.value));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -59,6 +192,36 @@ userNumber.addEventListener("input", (input) => {
      answer2.style.display = "none";
   }
 });        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const studentsarrowsli1 = document.querySelector(".students-arrows-li1");
+const studentsarrowsli2 = document.querySelector(".students-arrows-li2");
+const student1 = document.querySelector(".student1");
+const student2 = document.querySelector(".student2");
+const student3 = document.querySelector(".student3");
+const student4 = document.querySelector(".student4");
+const student5 = document.querySelector(".student5");
+const student6 = document.querySelector(".student6");
+const student7 = document.querySelector(".student7");
 
 
 
