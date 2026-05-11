@@ -111,41 +111,6 @@ dorivnue.addEventListener("click", (dorivnue) => {
 
 
 
-// function calculator(a, b){
-//  let result = 0
-//   dorivnue.addEventListener("click", (result) => {
-//  plus.addEventListener("click", (plus) => {
-//    if (plus.target.value) {
-//     result = a + b
-  
-//    }
-  
-//  });
-//  minus.addEventListener("click", (minus) => {
-//    if (minus.target.value) {
-//     result = a - b;
-//    }
-
-//  });
-//  mnozhennia.addEventListener("click", (mnozhennia) => {
-//    if (mnozhennia.target.value) {
-//     result = a * b;
-//    }
-  
-//  });
-//  dilennia.addEventListener("click", (dilennia) => {
-//    if (dilennia.target.value) {
-//       result = a / b;
-//    }
-
-//  });
-// return result
-//   })
-//  let result2 = result
-//  return result2
- 
-// }
-// console.log(calculator(calculatormegaUlinput1.value, calculatormegaUlinput2.value));
 
 
 
@@ -153,15 +118,9 @@ dorivnue.addEventListener("click", (dorivnue) => {
 
 
 
-
-
-
-
-
-
-
-
-
+const timeCalculatorinput = document.querySelector(".timeCalculator-input")
+const timeCalculatortimer = document.querySelector(".timeCalculator-timer");
+console.log(timeCalculatorinput.value)
 
 
 
@@ -192,6 +151,12 @@ userNumber.addEventListener("input", (input) => {
      answer2.style.display = "none";
   }
 });        
+
+
+
+
+
+
 
 
 
