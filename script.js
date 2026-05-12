@@ -162,11 +162,28 @@ userNumber.addEventListener("input", (input) => {
 
 
 
-
-
-
+let timeofjump = true
+let play = false 
+const dinosaurStartButton = document.querySelector(".dinosaur-startButton");
 const dinosaurUnit = document.querySelector(".dinosaur-unit");
- dinosaurUnit.addEventListener()
+document.addEventListener("keydown", (jump) => {
+  jump.preventDefault()
+  console.log(jump);
+  console.log(jump.code)
+  if(play === true && jump.code === "Space" && timeofjump === true){
+timeofjump = false
+dinosaurUnit.classList.add("dino-jump")
+setTimeout((timer) => {dinosaurUnit.classList.remove("dino-jump");
+  timeofjump = true
+}, 1200)
+
+  }
+})
+ dinosaurStartButton.addEventListener("click", (start) => {
+  play = true
+  dinosaurStartButton.style.display = "none"
+
+ })
 
 
 
