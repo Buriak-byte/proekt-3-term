@@ -165,6 +165,36 @@ userNumber.addEventListener("input", (input) => {
 
 
 
+const dinosaurUnit = document.querySelector(".dinosaur-unit");
+ dinosaurUnit.addEventListener()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
