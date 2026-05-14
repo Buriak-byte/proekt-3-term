@@ -817,7 +817,10 @@ left: 390px;
  
 }
 .dinosaur-rock{
-  animation: move (1.5 3)s linear infinite;
+
+animation-name: move;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
 
 }
 .dinosaur-underline{

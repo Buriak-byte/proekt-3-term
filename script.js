@@ -166,6 +166,7 @@ let timeofjump = true
 let play = false 
 const dinosaurStartButton = document.querySelector(".dinosaur-startButton");
 const dinosaurUnit = document.querySelector(".dinosaur-unit");
+const dinosaurRock = document.querySelector(".dinosaur-rock")
 document.addEventListener("keydown", (jump) => {
   jump.preventDefault()
   console.log(jump);
@@ -181,10 +182,27 @@ setTimeout((timer) => {dinosaurUnit.classList.remove("dino-jump");
 })
  dinosaurStartButton.addEventListener("click", (start) => {
   play = true
-  dinosaurStartButton.style.display = "none"
+  
+  dinosaurStartButton.style.display = "none";  
+  setInterval(() => {
+  let randomrockspeed = Math.floor(Math.random() * 3 + 1);
+    dinosaurRock.style.animationDuration = `${randomrockspeed}s`;  
+  }, 3000);
+
 
  })
-
+function hitofhitbox(){
+const dinoTop = window.getComputedStyle(dinosaurUnit).getPropertyValue("top"); 
+const rockLeft = window.getComputedStyle(dinosaurRock).getPropertyValue("left"); 
+const rockRight = window.getComputedStyle(dinosaurRock).getPropertyValue("right");
+if (dinoTop <= "1530px" && rockLeft >= "415px") {
+  alert("game over")
+  
+} 
+}
+setInterval((time) => {
+hitofhitbox()
+}, 100);
 
 
 
