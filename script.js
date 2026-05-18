@@ -161,48 +161,169 @@ userNumber.addEventListener("input", (input) => {
 
 
 
+// let changeOftime = false
+// let timeofjump = true
+// let play = false 
+// const dinosaurStartButton = document.querySelector(".dinosaur-startButton");
+// const dinosaurUnit = document.querySelector(".dinosaur-unit");
+// const dinosaurRock = document.querySelector(".dinosaur-rock")
+// document.addEventListener("keydown", (jump) => {
+//   jump.preventDefault()
+//   console.log(jump);
+//   console.log(jump.code)
+//   if(play === true && jump.code === "Space" && timeofjump === true){
+// timeofjump = false
+// dinosaurUnit.classList.add("dino-jump")
+// setTimeout((timer) => {dinosaurUnit.classList.remove("dino-jump");
+//   timeofjump = true
+// }, 1200)
 
-let timeofjump = true
-let play = false 
+//   }
+// })
+//  dinosaurStartButton.addEventListener("click", (start) => {
+//   play = true
+  
+//   dinosaurStartButton.style.display = "none";  
+//   setInterval(() => {
+//     changeOftime === true
+//   let randomrockspeed = Math.floor(Math.random() * 3 + 1);
+//   changeOftime === false
+//     dinosaurRock.style.animationDuration = `${randomrockspeed}s`;  
+//   }, 3000);
+
+
+//  })
+// function hitofhitbox(){
+// const dinoTop = window.getComputedStyle(dinosaurUnit).getPropertyValue("top"); 
+// const rockLeft = window.getComputedStyle(dinosaurRock).getPropertyValue("left"); 
+// const rockRight = window.getComputedStyle(dinosaurRock).getPropertyValue("right");
+// if (dinoTop <= "1530px" && rockLeft >= "415px") {
+//   alert("game over")
+  
+// } 
+// }
+// setInterval((time) => {
+// hitofhitbox()
+// }, 100);
+
+
+
+
+
+
+
+
+
+
+// let timeofjump = true;
+// let play = false;
+
+// const dinosaurStartButton = document.querySelector(".dinosaur-startButton");
+// const dinosaurUnit = document.querySelector(".dinosaur-unit");
+// const dinosaurRock = document.querySelector(".dinosaur-rock");
+
+// document.addEventListener("keydown", (jump) => {
+//   jump.preventDefault();
+//   if (play === true && jump.code === "Space" && timeofjump === true) {
+//     timeofjump = false;
+//     dinosaurUnit.classList.add("dino-jump");
+//     setTimeout(() => {
+//       dinosaurUnit.classList.remove("dino-jump");
+//       timeofjump = true;
+//     }, 1200);
+//   }
+// });
+
+// dinosaurStartButton.addEventListener("click", () => {
+//   play = true;
+//   dinosaurStartButton.style.display = "none";
+
+//   // Функція для зміни швидкості каменю
+//   function changeRockSpeed() {
+//     let randomRockSpeed = Math.floor(Math.random() * 3 + 1);
+
+//     // Перезапускаємо анімацію з новою швидкістю
+//     dinosaurRock.style.animation = "none";
+//     dinosaurRock.offsetHeight; // примусовий reflow — скидає анімацію
+//     dinosaurRock.style.animationDuration = `${randomRockSpeed}s`;
+//     dinosaurRock.style.animation = "";
+//     dinosaurRock.style.animationDuration = `${randomRockSpeed}s`;
+//   }
+
+//   changeRockSpeed(); // перший запуск
+//   setInterval(changeRockSpeed, 3000); // кожні 3 секунди
+// });
+
+// function hitofhitbox() {
+//   const dinoTop = window.getComputedStyle(dinosaurUnit).getPropertyValue("top");
+//   const rockLeft = window
+//     .getComputedStyle(dinosaurRock)
+//     .getPropertyValue("left");
+
+//   if (parseInt(dinoTop) <= 1530 && parseInt(rockLeft) >= 415) {
+//     play = false;
+//     alert("Game Over");
+//   }
+// }
+
+// setInterval(hitofhitbox, 100);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let timeofjump = true;
+let play = false;
+
 const dinosaurStartButton = document.querySelector(".dinosaur-startButton");
 const dinosaurUnit = document.querySelector(".dinosaur-unit");
-const dinosaurRock = document.querySelector(".dinosaur-rock")
+const dinosaurRock = document.querySelector(".dinosaur-rock");
+
 document.addEventListener("keydown", (jump) => {
-  jump.preventDefault()
-  console.log(jump);
-  console.log(jump.code)
-  if(play === true && jump.code === "Space" && timeofjump === true){
-timeofjump = false
-dinosaurUnit.classList.add("dino-jump")
-setTimeout((timer) => {dinosaurUnit.classList.remove("dino-jump");
-  timeofjump = true
-}, 1200)
-
+  jump.preventDefault();
+  if (play === true && jump.code === "Space" && timeofjump === true) {
+    timeofjump = false;
+    dinosaurUnit.classList.add("dino-jump");
+    dinosaurUnit.classList.add("dino-jump");
+    setTimeout(() => {
+      dinosaurUnit.classList.remove("dino-jump");
+      timeofjump = true;
+    }, 1200);
   }
-})
- dinosaurStartButton.addEventListener("click", (start) => {
-  play = true
-  
-  dinosaurStartButton.style.display = "none";  
-  setInterval(() => {
-  let randomrockspeed = Math.floor(Math.random() * 3 + 1);
-    dinosaurRock.style.animationDuration = `${randomrockspeed}s`;  
-  }, 3000);
+});
 
+dinosaurStartButton.addEventListener("click", () => {
+  play = true;
+  dinosaurStartButton.style.display = "none";
 
- })
-function hitofhitbox(){
-const dinoTop = window.getComputedStyle(dinosaurUnit).getPropertyValue("top"); 
-const rockLeft = window.getComputedStyle(dinosaurRock).getPropertyValue("left"); 
-const rockRight = window.getComputedStyle(dinosaurRock).getPropertyValue("right");
-if (dinoTop <= "1530px" && rockLeft >= "415px") {
-  alert("game over")
-  
-} 
+  let randomRockSpeed = 1.5
+  dinosaurRock.style.animationDuration = `${randomRockSpeed}s`;
+});
+
+function hitofhitbox() {
+  const dinoTop = parseInt(
+    window.getComputedStyle(dinosaurUnit).getPropertyValue("top"),
+  );
+  const rockLeft = parseInt(
+    window.getComputedStyle(dinosaurRock).getPropertyValue("left"),
+  );
+
+  if (rockLeft <= 700 &&  dinoTop <= 1530){
+    play = false;
+    alert("Game Over");
+  }
 }
-setInterval((time) => {
-hitofhitbox()
-}, 100);
 
 
 
@@ -217,9 +338,17 @@ hitofhitbox()
 
 
 
-
-
-
+let startFootball = false
+const field = document.querySelector(".football-field");
+const cursorIMG = document.querySelector(".football-corsor");
+const ball = document.querySelector(".football-ball");
+cursorIMG.addEventListener("mousemove", (cursorFocus) => {
+  element.style.left = e.clientX + "px";
+  element.style.top = e.clientY + "px";
+});
+// cursorIMG.addEventListener("click", (ballfocus) => {
+ 
+// })
 
 
 
