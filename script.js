@@ -340,11 +340,11 @@ function hitofhitbox() {
 
 let startFootball = false
 const field = document.querySelector(".football-field");
-const cursorIMG = document.querySelector(".football-corsor");
+let cursorIMG = document.querySelector(".football-cursor");
 const ball = document.querySelector(".football-ball");
-cursorIMG.addEventListener("mousemove", (cursorFocus) => {
-  element.style.left = e.clientX + "px";
-  element.style.top = e.clientY + "px";
+field.addEventListener("mousemove", (cursorFocus) => {
+  cursorIMG.style.left = cursorFocus.offsetX + "px"; // ← відносно поля
+  cursorIMG.style.top = cursorFocus.offsetY + "px"; // ← відносно поля
 });
 // cursorIMG.addEventListener("click", (ballfocus) => {
  

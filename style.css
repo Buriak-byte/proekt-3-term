@@ -832,6 +832,9 @@ animation-iteration-count: infinite;
     left: 480px;
     position: absolute;
 }
+.football {
+  position: relative;
+}
 .football-zag{
     
 z-index: 10;
@@ -853,31 +856,32 @@ color: #000000;
 
 }
 .football-field{
-    position: absolute;
+    position: relative;
     z-index: 10;
     width: 720px;
     height: 220px;
-    top: 1900px;
+   
   left: 390px;
+  bottom: 1820px;
   background-color: #5ABB58;
   border-radius: 37px;
-  
+  cursor: none;
 }
 .football-ball{
      position: absolute;
-    top: 1980px;
-    left: 520px;
+    top: 0;
+    left: 0;
     width: 50px;
     height: 50px;
-    z-index: 11;
+    z-index: 20;
 }
-.football-corsor{
-      position: absolute;
-    top: 2000px;
-    left: 920px;
-    width: 22px;
-    height: 22px;
-    z-index: 11;
+.football-cursor {
+  position: absolute;
+  top: 0;      /* ← початкова позиція */
+  left: 0;
+  width: 22px;
+  height: 22px;
+  z-index: 20;
 }
 .dinosaur-underline{
        width: 536px;
