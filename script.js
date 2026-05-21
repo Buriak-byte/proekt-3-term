@@ -283,6 +283,42 @@ userNumber.addEventListener("input", (input) => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let timeofjump = true;
 let play = false;
 
@@ -336,19 +372,76 @@ function hitofhitbox() {
 
 
 
+// const footballballBUTTON = document.querySelector(".football-ball-BUTTON");
+// let ballFocusLet = false
+// let startFootball = false
+// let antiBAGfootball = false
+// const field = document.querySelector(".football-field");
+// let cursorIMG = document.querySelector(".football-cursor");
+// const ball = document.querySelector(".football-ball");
 
+// field.addEventListener("mousemove", (cursorFocus) => {
 
-let startFootball = false
-const field = document.querySelector(".football-field");
-let cursorIMG = document.querySelector(".football-cursor");
-const ball = document.querySelector(".football-ball");
-field.addEventListener("mousemove", (cursorFocus) => {
-  cursorIMG.style.left = cursorFocus.offsetX + "px"; // ← відносно поля
-  cursorIMG.style.top = cursorFocus.offsetY + "px"; // ← відносно поля
-});
-// cursorIMG.addEventListener("click", (ballfocus) => {
- 
+// cursorIMG.style.left = cursorFocus.offsetX + "px";
+// cursorIMG.style.top = cursorFocus.offsetY + "px";
+  
+
+// });
+// footballballBUTTON.addEventListener("mousemove", (ballfocus) => {
+//   ballFocusLet === true;
+// ball.style.left = ballfocus.offsetX + "px";
+// ball.style.top = ballfocus.offsetY + "px";
 // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const biggestNumresult = document.querySelector(".biggestNum-result");
+const biggestNuminput1 = document.querySelector(
+  ".biggestNum-input-1",
+);
+const biggestNuminput2 = document.querySelector(
+  ".biggestNum-input-2",
+);
+const biggestNuminput3 = document.querySelector(
+  ".biggestNum-input-3",
+);
+const biggestNuminput = document.querySelector(".biggestNum-input");
+switch (biggestNuminput) {
+  case biggestNuminput1 > biggestNuminput2 > biggestNuminput3:
+biggestNumresult.textContent = `Найбільше число, яке ви ввели - ${biggestNuminput1}`;
+    break;
+
+
+}
+
 
 
 
