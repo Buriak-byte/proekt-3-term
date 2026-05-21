@@ -372,21 +372,24 @@ function hitofhitbox() {
 
 
 
-// const footballballBUTTON = document.querySelector(".football-ball-BUTTON");
-// let ballFocusLet = false
-// let startFootball = false
-// let antiBAGfootball = false
-// const field = document.querySelector(".football-field");
-// let cursorIMG = document.querySelector(".football-cursor");
-// const ball = document.querySelector(".football-ball");
+const footballballBUTTON = document.querySelector(".football-ball-BUTTON");
+let ballFocusLet = false
+let startFootball = false
+let antiBAGfootball = false
+const field = document.querySelector(".football-field");
+let cursorIMG = document.querySelector(".football-cursor");
+const ball = document.querySelector(".football-ball");
 
-// field.addEventListener("mousemove", (cursorFocus) => {
-
-// cursorIMG.style.left = cursorFocus.offsetX + "px";
-// cursorIMG.style.top = cursorFocus.offsetY + "px";
-  
-
-// });
+field.addEventListener("click", (cursorFocus) => {
+  cursorIMG.style.left = cursorFocus.offsetX - 11 + "px";
+  cursorIMG.style.top = cursorFocus.offsetY - 11 + "px";
+  ball.style.left = cursorFocus.offsetX - 25 + "px";
+  ball.style.top = cursorFocus.offsetY - 25 + "px";
+  // cursorIMG.addEventListener("mousemove", (cursoreMove) => {
+  //     cursorIMG.style.left = cursoreMove.offsetX - 11 + "px";
+  //     cursorIMG.style.top = cursoreMove.offsetY - 11 + "px";
+  // })
+});
 // footballballBUTTON.addEventListener("mousemove", (ballfocus) => {
 //   ballFocusLet === true;
 // ball.style.left = ballfocus.offsetX + "px";
@@ -464,9 +467,9 @@ biggestNumresult.textContent = `Найбільше число, яке ви вв�
 
 
 
-
-const studentsarrowsli1 = document.querySelector(".students-arrows-li1");
-const studentsarrowsli2 = document.querySelector(".students-arrows-li2");
+ let indexStudents = 0
+const studentsarrowsli1 = document.querySelector(".students-arrows-li1-style");
+const studentsarrowsli2 = document.querySelector(".students-arrows-li2-style");
 const student1 = document.querySelector(".student1");
 const student2 = document.querySelector(".student2");
 const student3 = document.querySelector(".student3");
@@ -474,9 +477,27 @@ const student4 = document.querySelector(".student4");
 const student5 = document.querySelector(".student5");
 const student6 = document.querySelector(".student6");
 const student7 = document.querySelector(".student7");
-
-
-
+const student = document.querySelectorAll(".students-imgs-position");
+studentsarrowsli1.addEventListener("click", (turnLeft) => {
+ if(indexStudents === 0){
+indexStudents = student.length - 1
+ } 
+indexStudents = indexStudents - 1
+student.forEach((stud) => {
+  stud.classList.remove("active");
+});
+student[indexStudents].classList.add("active")
+})
+studentsarrowsli2.addEventListener("click", (turnRight) => {
+  if (indexStudents === student.length - 1) {
+    indexStudents = 0
+  }
+  indexStudents = indexStudents + 1;
+ student.forEach((stud) => {
+   stud.classList.remove("active");
+ });
+ student[indexStudents].classList.add("active");
+});
 
 
 

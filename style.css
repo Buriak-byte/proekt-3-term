@@ -865,7 +865,7 @@ color: #000000;
   bottom: 1820px;
   background-color: #5ABB58;
   border-radius: 37px;
-  cursor: none;
+  /* cursor: none; */
 }
 .football-ball{
      position: relative;
@@ -1021,18 +1021,23 @@ bottom: 0;
     position: absolute;
 }
 .students-names{
-      position: absolute;
+   
     z-index: 10;
     top: 2665px;
     left: 725px;
 }
+.students-imgs-position{
+position: absolute;
+}
 .student-name{
-    position: inherit;
+   
     z-index: inherit;
     top: 0;
     left: 0;
     /* Ім’я студента */
-
+  position: absolute;
+   top: 175px;
+   left: 70px;
 
 
 font-family: 'Montserrat Alternates';
@@ -1050,10 +1055,26 @@ color: #000000;
     display: none;
 }
 .students-jobs{
-     position: absolute;
+ 
     z-index: 10;
     top: 2690px;
     left: 680px;
+}
+.students-imgs-position{
+    display: none;
+}
+@keyframes fromSky{
+0%{
+    transform: translateY(-100px);
+
+}
+100%{
+     transform: translateY(0px);
+}
+}
+.active{
+    display: block;
+    animation: fromSky 1s linear;
 }
 .students-job{
     top: 0;
@@ -1069,7 +1090,9 @@ line-height: 15px;
 /* identical to box height */
 
 color: #000000;
-
+  position: absolute;
+   top: 200px;
+   left: 70px;
 
 }
 .students-jobs li:not(:first-child){
