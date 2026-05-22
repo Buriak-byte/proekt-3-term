@@ -1058,14 +1058,14 @@ color: #000000;
  
     z-index: 10;
     top: 2690px;
-    left: 680px;
+    left: 600px;
 }
 .students-imgs-position{
     display: none;
 }
 @keyframes fromSky{
 0%{
-    transform: translateY(-100px);
+    transform: translateX(-250px);
 
 }
 100%{
