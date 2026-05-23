@@ -8,6 +8,18 @@ body{height: 3550px;
     padding: 0;
     list-style: none;
 }
+.main-white-priamokutnyk {
+    pointer-events: none;
+}
+.main-white-priamokutnyk{
+    width: 80vw;
+    height: 3456px;
+    background-color: white;
+    z-index: 2;
+    position: absolute;
+    top: 85px;
+right: 175px;
+}    
 .header{
     height: 80px;
     background-color: white;
@@ -77,15 +89,7 @@ color: #000000;
     z-index: 1;
     background-repeat: no-repeat;
 }
-.main-white-priamokutnyk{
-    width: 80vw;
-    height: 3456px;
-    background-color: white;
-    z-index: 2;
-    position: absolute;
-    top: 85px;
-right: 175px;
-}    
+
 .main-zagolovok{
     /* Популярні інетрактивні ігри */
 z-index: 10;
@@ -855,18 +859,7 @@ color: #000000;
 
 
 }
-.football-field{
-    position: relative;
-    z-index: 10;
-    width: 720px;
-    height: 220px;
-   
-  left: 390px;
-  bottom: 1820px;
-  background-color: #5ABB58;
-  border-radius: 37px;
-  /* cursor: none; */
-}
+
 .football-ball{
      position: relative;
    
@@ -1021,16 +1014,17 @@ bottom: 0;
     position: absolute;
 }
 .students-names{
-   
+   text-align: center;
     z-index: 10;
     top: 2665px;
     left: 725px;
 }
 .students-imgs-position{
 position: absolute;
+right: 25px;
 }
 .student-name{
-   
+   text-align: center;
     z-index: inherit;
     top: 0;
     left: 0;
@@ -1055,28 +1049,49 @@ color: #000000;
     display: none;
 }
 .students-jobs{
- 
+ text-align: center;
     z-index: 10;
     top: 2690px;
     left: 600px;
 }
 .students-imgs-position{
     display: none;
+   text-align: center;
 }
-@keyframes fromSky{
+@keyframes toRight{
 0%{
-    transform: translateX(-250px);
+    transform: translateX(0px);
 
 }
-100%{
-     transform: translateY(0px);
+25%{
+     transform: translateX(150px);
+}
+26%{
+     transform: translateX(-150px);
 }
 }
-.active{
+@keyframes toLeft{
+0%{
+    transform: translateX(0px);
+
+}
+25%{
+     transform: translateX(-150px);
+}
+26%{
+     transform: translateX(150px);
+}
+}
+.activeRight{
     display: block;
-    animation: fromSky 1s linear;
+    animation: toRight 1.5s linear;
+}
+.activeLeft{
+ display: block;
+    animation: toLeft 1.5s linear;
 }
 .students-job{
+    text-align: center;
     top: 0;
     left: 0;
     position: inherit;
@@ -1357,4 +1372,31 @@ color: #000000;
     height: 50px;
 background-color: #000000;
 color: white;
+}
+.football-field {
+    position: absolute;
+    z-index: 10;
+    width: 720px;
+    height: 220px;
+    left: 390px;
+    top: 1880px;
+    background-color: #5ABB58;
+    border-radius: 37px;
+}
+/* .football-field{
+    position: relative;
+    z-index: 10;
+    width: 720px;
+    height: 220px;
+   
+  left: 390px;
+  background-color: #5ABB58;
+  border-radius: 37px;
+
+} */
+ .visokosnyi-year-input {
+    color: #000000;
+}
+input {
+    color: #000000;
 }

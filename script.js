@@ -1,34 +1,33 @@
 const visokosnyiYearInput = document.querySelector(".visokosnyi-year-input");
 console.log(visokosnyiYearInput);
 const visokosnyiYearAnswer1 = document.querySelector(
-  ".visokosnyi-year-answer1");
-  const visokosnyiyearanswer2 = document.querySelector(
-    ".visokosnyi-year-answer2",
-  );
-  // function leapYear(year) {
-  //   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
-  // }
-// visokosnyiYearInput.addEventListener("input", (e) => {
-//   if (
-//     visokosnyiYearInput.e.target.value % 4 === 0 &&
-//       visokosnyiYearInput.e.target.value % 100 !== 0 ||
-//     visokosnyiYearInput.e.target.value % 400 === 0
-//   ) {
-//     visokosnyiYearAnswer1.textContent = "це високосний рік!";
-//     visokosnyiYearAnswer1.style.color = "#039900";
-//   } else if (visokosnyiYearInput.e.target.value % 4 !== 0) {
-//     visokosnyiYearAnswer1.textContent = "це не високосний рік!";
-//     visokosnyiYearAnswer1.style.color = "#990000;";
-//   } else {
-//     visokosnyiYearAnswer1.style.display = "none";
-//     visokosnyiyearanswer2.style.display = "none";
-//   }
-// });
+  ".visokosnyi-year-answer1",
+);
+const visokosnyiyearanswer2 = document.querySelector(
+  ".visokosnyi-year-answer2",
+);
+function leapYear(year) {
+  return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+}
+visokosnyiYearInput.addEventListener("input", (e) => {
+  const year = Number(e.target.value);
 
+  if (!year) {
+    visokosnyiYearAnswer1.textContent = "";
+    visokosnyiyearanswer2.textContent = "";
+    return;
+  }
 
-
-
-
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    visokosnyiYearAnswer1.textContent = "це високосний рік!";
+    visokosnyiYearAnswer1.style.color = "#039900";
+    // visokosnyiyearanswer2.textContent = "";
+  } else {
+    visokosnyiYearAnswer1.textContent = "це не високосний рік!";
+    visokosnyiYearAnswer1.style.color = "#990000";
+    // visokosnyiYearAnswer1.textContent = "";
+  }
+});
 
 const calculatormegaUlinput1 = document.querySelector(
   ".calculator-megaUl-input1",
@@ -44,95 +43,60 @@ const plus = document.querySelector(".plus");
 const mnozhennia = document.querySelector(".mnozhennia");
 const minus = document.querySelector(".minus");
 const dilennia = document.querySelector(".dilennia");
-console.log(plus, minus, mnozhennia, dilennia)
+console.log(plus, minus, mnozhennia, dilennia);
 
+let operator = null;
+plus.addEventListener("click", (plus) => {
+  operator = "+";
+});
 
-
-
-
-
-let operator = null
- plus.addEventListener("click", (plus) => {
-  operator = "+"
-   
- });
-
- minus.addEventListener("click", (minus) => {
-  operator = "-"
- });
- mnozhennia.addEventListener("click", (mnozhennia) => {
-  operator = "*"
-  
- });
- dilennia.addEventListener("click", (dilennia) => {
-  operator = "/"
+minus.addEventListener("click", (minus) => {
+  operator = "-";
+});
+mnozhennia.addEventListener("click", (mnozhennia) => {
+  operator = "*";
+});
+dilennia.addEventListener("click", (dilennia) => {
+  operator = "/";
   console.log(operator);
- });
+});
 dorivnue.addEventListener("click", (dorivnue) => {
-  const calculatormegaUlinput1Value = Number(calculatormegaUlinput1.value)
+  const calculatormegaUlinput1Value = Number(calculatormegaUlinput1.value);
   const calculatormegaUlinput2Value = Number(calculatormegaUlinput2.value);
   //  console.log(calculatormegaUlinput2Value, calculatormegaUlinput1Value);
-   if (
-     isNaN(calculatormegaUlinput2Value) ||
-     isNaN(calculatormegaUlinput1Value)
-   ) {
-     console.log("напиши число!!!");
-     return
-   }
-   let resultOfCalculator = null
-   switch (operator) {
-     case "+":
-       resultOfCalculator =
-         calculatormegaUlinput1Value + calculatormegaUlinput2Value;
-       break;
-     case "-":
-       resultOfCalculator =
-         calculatormegaUlinput1Value - calculatormegaUlinput2Value;
-       break;
-     case "*":
-       resultOfCalculator =
-         calculatormegaUlinput1Value * calculatormegaUlinput2Value;
-       break;
-     case "/":
-       resultOfCalculator =
-         calculatormegaUlinput1Value / calculatormegaUlinput2Value;
-       break;
-   }
-   console.log(resultOfCalculator)
- calculatormegaUlinput3.value = resultOfCalculator
-  })
-  
+  if (
+    isNaN(calculatormegaUlinput2Value) ||
+    isNaN(calculatormegaUlinput1Value)
+  ) {
+    console.log("напиши число!!!");
+    return;
+  }
+  let resultOfCalculator = null;
+  switch (operator) {
+    case "+":
+      resultOfCalculator =
+        calculatormegaUlinput1Value + calculatormegaUlinput2Value;
+      break;
+    case "-":
+      resultOfCalculator =
+        calculatormegaUlinput1Value - calculatormegaUlinput2Value;
+      break;
+    case "*":
+      resultOfCalculator =
+        calculatormegaUlinput1Value * calculatormegaUlinput2Value;
+      break;
+    case "/":
+      resultOfCalculator =
+        calculatormegaUlinput1Value / calculatormegaUlinput2Value;
+      break;
+  }
+  console.log(resultOfCalculator);
+  calculatormegaUlinput3.value = resultOfCalculator;
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const timeCalculatorinput = document.querySelector(".timeCalculator-input")
+const timeCalculatorinput = document.querySelector(".timeCalculator-input");
 const timeCalculatortimer = document.querySelector(".timeCalculator-timer");
-console.log(timeCalculatorinput.value)
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(timeCalculatorinput.value);
 
 let computersNumber = Math.floor(Math.random() * 10);
 let userNumber = document.querySelector(".random-input");
@@ -143,27 +107,21 @@ userNumber.addEventListener("input", (input) => {
   if (Number(input.target.value) === computersNumber && input.target.value) {
     answer1.style.display = "block";
     answer2.style.display = "none";
-  } else if (Number(input.target.value) !== computersNumber && input.target.value) {
+  } else if (
+    Number(input.target.value) !== computersNumber &&
+    input.target.value
+  ) {
     answer1.style.display = "none";
     answer2.style.display = "block";
-  } else{
-     answer1.style.display = "none";
-     answer2.style.display = "none";
+  } else {
+    answer1.style.display = "none";
+    answer2.style.display = "none";
   }
-});        
-
-
-
-
-
-
-
-
-
+});
 
 // let changeOftime = false
 // let timeofjump = true
-// let play = false 
+// let play = false
 // const dinosaurStartButton = document.querySelector(".dinosaur-startButton");
 // const dinosaurUnit = document.querySelector(".dinosaur-unit");
 // const dinosaurRock = document.querySelector(".dinosaur-rock")
@@ -182,38 +140,28 @@ userNumber.addEventListener("input", (input) => {
 // })
 //  dinosaurStartButton.addEventListener("click", (start) => {
 //   play = true
-  
-//   dinosaurStartButton.style.display = "none";  
+
+//   dinosaurStartButton.style.display = "none";
 //   setInterval(() => {
 //     changeOftime === true
 //   let randomrockspeed = Math.floor(Math.random() * 3 + 1);
 //   changeOftime === false
-//     dinosaurRock.style.animationDuration = `${randomrockspeed}s`;  
+//     dinosaurRock.style.animationDuration = `${randomrockspeed}s`;
 //   }, 3000);
-
 
 //  })
 // function hitofhitbox(){
-// const dinoTop = window.getComputedStyle(dinosaurUnit).getPropertyValue("top"); 
-// const rockLeft = window.getComputedStyle(dinosaurRock).getPropertyValue("left"); 
+// const dinoTop = window.getComputedStyle(dinosaurUnit).getPropertyValue("top");
+// const rockLeft = window.getComputedStyle(dinosaurRock).getPropertyValue("left");
 // const rockRight = window.getComputedStyle(dinosaurRock).getPropertyValue("right");
 // if (dinoTop <= "1530px" && rockLeft >= "415px") {
 //   alert("game over")
-  
-// } 
+
+// }
 // }
 // setInterval((time) => {
 // hitofhitbox()
 // }, 100);
-
-
-
-
-
-
-
-
-
 
 // let timeofjump = true;
 // let play = false;
@@ -268,57 +216,6 @@ userNumber.addEventListener("input", (input) => {
 
 // setInterval(hitofhitbox, 100);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let timeofjump = true;
 let play = false;
 
@@ -327,10 +224,11 @@ const dinosaurUnit = document.querySelector(".dinosaur-unit");
 const dinosaurRock = document.querySelector(".dinosaur-rock");
 
 document.addEventListener("keydown", (jump) => {
-  jump.preventDefault();
+  if (jump.code === "Space") {
+    jump.preventDefault();
+  }
   if (play === true && jump.code === "Space" && timeofjump === true) {
     timeofjump = false;
-    dinosaurUnit.classList.add("dino-jump");
     dinosaurUnit.classList.add("dino-jump");
     setTimeout(() => {
       dinosaurUnit.classList.remove("dino-jump");
@@ -343,7 +241,7 @@ dinosaurStartButton.addEventListener("click", () => {
   play = true;
   dinosaurStartButton.style.display = "none";
 
-  let randomRockSpeed = 1.5
+  let randomRockSpeed = 1.5;
   dinosaurRock.style.animationDuration = `${randomRockSpeed}s`;
 });
 
@@ -355,27 +253,16 @@ function hitofhitbox() {
     window.getComputedStyle(dinosaurRock).getPropertyValue("left"),
   );
 
-  if (rockLeft <= 700 &&  dinoTop <= 1530){
+  if (rockLeft <= 700 && dinoTop <= 1530) {
     play = false;
     alert("Game Over");
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 const footballballBUTTON = document.querySelector(".football-ball-BUTTON");
-let ballFocusLet = false
-let startFootball = false
-let antiBAGfootball = false
+let ballFocusLet = false;
+let startFootball = false;
+let antiBAGfootball = false;
 const field = document.querySelector(".football-field");
 let cursorIMG = document.querySelector(".football-cursor");
 const ball = document.querySelector(".football-ball");
@@ -396,78 +283,18 @@ field.addEventListener("click", (cursorFocus) => {
 // ball.style.top = ballfocus.offsetY + "px";
 // })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const biggestNumresult = document.querySelector(".biggestNum-result");
-const biggestNuminput1 = document.querySelector(
-  ".biggestNum-input-1",
-);
-const biggestNuminput2 = document.querySelector(
-  ".biggestNum-input-2",
-);
-const biggestNuminput3 = document.querySelector(
-  ".biggestNum-input-3",
-);
+const biggestNuminput1 = document.querySelector(".biggestNum-input-1");
+const biggestNuminput2 = document.querySelector(".biggestNum-input-2");
+const biggestNuminput3 = document.querySelector(".biggestNum-input-3");
 const biggestNuminput = document.querySelector(".biggestNum-input");
 switch (biggestNuminput) {
   case biggestNuminput1 > biggestNuminput2 > biggestNuminput3:
-biggestNumresult.textContent = `Найбільше число, яке ви ввели - ${biggestNuminput1}`;
+    biggestNumresult.textContent = `Найбільше число, яке ви ввели - ${biggestNuminput1}`;
     break;
-
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- let indexStudents = 0
+let indexStudents = 0;
 const studentsarrowsli1 = document.querySelector(".students-arrows-li1-style");
 const studentsarrowsli2 = document.querySelector(".students-arrows-li2-style");
 const student1 = document.querySelector(".student1");
@@ -479,39 +306,29 @@ const student6 = document.querySelector(".student6");
 const student7 = document.querySelector(".student7");
 const student = document.querySelectorAll(".students-imgs-position");
 studentsarrowsli1.addEventListener("click", (turnLeft) => {
- if(indexStudents === 0){
-indexStudents = student.length - 1
- } 
-indexStudents = indexStudents - 1
-student.forEach((stud) => {
-  stud.classList.remove("active");
+  if (indexStudents === 0) {
+    indexStudents = student.length - 1;
+  }
+  indexStudents = indexStudents - 1;
+  student.forEach((stud) => {
+    stud.classList.remove("activeRight");
+    stud.classList.remove("activeLeft");
+  });
+  student[indexStudents].classList.add("activeRight");
+  student[indexStudents].classList.add("activeLeft");
 });
-student[indexStudents].classList.add("active")
-})
+
 studentsarrowsli2.addEventListener("click", (turnRight) => {
   if (indexStudents === student.length - 1) {
-    indexStudents = 0
+    indexStudents = 0;
   }
   indexStudents = indexStudents + 1;
- student.forEach((stud) => {
-   stud.classList.remove("active");
- });
- student[indexStudents].classList.add("active");
+  student.forEach((stud) => {
+    stud.classList.remove("activeLeft");
+    stud.classList.remove("activeRight");
+  });
+  student[indexStudents].classList.add("activeRight");
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const scientists = [
   {
@@ -652,28 +469,6 @@ function deleteA(scientists) {
 }
 console.log(deleteA(scientists));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const scientistsBorningConstA = scientists.sort((a, b) => {
   return a.born - b.born;
 });
@@ -681,9 +476,8 @@ const scientistsBorningConstB = scientists.sort((a, b) => {
   return b.born - a.born;
 });
 
-
-function scientistsBorning(scientists,minusA,minusB) {
-return scientistsBorningConstA[0], scientistsBorningConstB[0]
+function scientistsBorning(scientists, minusA, minusB) {
+  return (scientistsBorningConstA[0], scientistsBorningConstB[0]);
 }
 console.log(
   scientistsBorning(
@@ -692,46 +486,4 @@ console.log(
     scientistsBorning.minusB,
   ),
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function similarLitters(scientists){
-//   const similarLittersScintists = scientists.filter((scientist) => {
-//     let someLetterName = scientist.indexOf(0)
-//     let someLetterSurname = someLetterName
-//     return 
-//   })
-//   return similarLittersScintists
-// }
-// console.log(similarLitters(scientists))
-
-
-
-
-
-
-
-
-
 
