@@ -227,15 +227,39 @@ dorivnue.addEventListener("click", (dorivnue) => {
   calculatormegaUlinput3.value = resultOfCalculator;
 });
 
+
+
+
+
+
+
+
+
+
+const timeryears = document.querySelector(".timer-years");
+const timermonths = document.querySelector(".timer-mounts");
+const timerdays = document.querySelector(".timer-days");
+const timerminutes = document.querySelector(".timer-minutes");
+const timerseconds = document.querySelector(".timer-seconds");
 const timeCalculatorinput = document.querySelector(".timeCalculator-input");
 const timeCalculatortimer = document.querySelector(".timeCalculator-timer");
-console.log(timeCalculatorinput.value);
-if(timeCalculatorinput % 31536000){
-  
-}
 
+// ось тут — після querySelector
+timeCalculatorinput.addEventListener("input", () => {
+  const totalSeconds = Number(timeCalculatorinput.value);
 
+  const years = Math.floor(totalSeconds / 31536000);
+  const months = Math.floor((totalSeconds % 31536000) / 2592000);
+  const days = Math.floor((totalSeconds % 2592000) / 86400);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
 
+  timeryears.textContent = years + "р.";
+  timermonths.textContent = months + "міс.";
+  timerdays.textContent = days + "дн.";
+  timerminutes.textContent = minutes + "хв.";
+  timerseconds.textContent = seconds + "с.";
+});
 
 
 
@@ -447,12 +471,30 @@ const biggestNuminput1 = document.querySelector(".biggestNum-input-1");
 const biggestNuminput2 = document.querySelector(".biggestNum-input-2");
 const biggestNuminput3 = document.querySelector(".biggestNum-input-3");
 const biggestNuminput = document.querySelector(".biggestNum-input");
-switch (biggestNuminput) {
-  case biggestNuminput1 > biggestNuminput2 > biggestNuminput3:
-    biggestNumresult.textContent = `Найбільше число, яке ви ввели - ${biggestNuminput1}`;
-    break;
-}
+function biggestNum(){
+const biggestNuminput1Value = parseFloat(biggestNuminput1.value)
+const biggestNuminput3Value = parseFloat(biggestNuminput3.value);
+const biggestNuminput2Value = parseFloat(biggestNuminput2.value);
+console.log(typeof biggestNuminput1Value);
+if (
+  typeof biggestNuminput1Value !== "number" ||
+  typeof biggestNuminput2Value !== "number" ||
+  typeof biggestNuminput3Value !== "number"
+) {
+  return
 
+}else{ 
+  let maxNum = Math.max(
+    biggestNuminput1Value,
+    biggestNuminput2Value,
+    biggestNuminput3Value,
+  );
+  biggestNumresult.textContent = `найбільше число яке ви ввели число(${maxNum})`;
+}
+}
+  biggestNuminput1.addEventListener("input", biggestNum);
+ biggestNuminput2.addEventListener("input", biggestNum);
+  biggestNuminput3.addEventListener("input", biggestNum);
 let indexStudents = 0;
 const studentsarrowsli1 = document.querySelector(".students-arrows-li1-style");
 const studentsarrowsli2 = document.querySelector(".students-arrows-li2-style");
@@ -575,11 +617,26 @@ const scientists = [
     id: 12,
   },
 ];
-function bornIn19ST(scientists) {
+function createli(scientists){
+scientists.forEach((scientist, index, array) => {
+  const createli = document.createElement("li")
+  const increateliname = document.createElement("p")
+    const increatelilife = document.createElement("p");
+    increateliname.textContent = `${scientist.name} ${scientist.surname}`
+     increatelilife.textContent = `${scientist.born}-${scientist.dead}`;
+     createli.classList.add("createli")
+     createli.append(increateliname, increatelilife)
+     emptyUL.append(createli)
+})
+}
+const emptyUL = document.querySelector(".emptyUL")
+const button1 = document.querySelector("#button1");
+button1.addEventListener("click", bornIn19ST);
+function bornIn19ST(i) {
   const whobornIn19ST = scientists.filter((human) => {
     return 1800 <= human.born && human.born <= 1900;
   });
-  return whobornIn19ST;
+  createli(whobornIn19ST);
 }
 console.log(bornIn19ST(scientists));
 function orderYears(scientists) {

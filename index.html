@@ -214,15 +214,15 @@
 <img class="timeCalculator-points" src="./PNGS/points.png" alt="пунктир">
         <div class="visokosnyi-year-underline"></div>
 <ul class="timecalculator-timer">
-    <li></li>
+    <li class = "timer-years">0р.</li>
     <li>:</li>
-    <li></li>
+    <li class="timer-mounts">0міс.</li>
     <li>:</li>
-    <li></li>
+    <li class="timer-days">0дн</li>
     <li>:</li>
-    <li></li>
+    <li class="timer-minutes">0хв.</li>
     <li>:</li>
-    <li></li>
+    <li class="timer-seconds">0с.</li>
 </ul>
  <div class="timeCalculator-underline"></div>
         </section>
@@ -318,9 +318,9 @@
 <section class="biggestNum">
 <p class="biggestNum-zag">Введіть 3 числа</p>
 <ul class="biggestNum-inputs">
-    <li><input class="biggestNum-input biggestNum-input-1" placeholder="Введіть число" type="text"></li>
-    <li><input class="biggestNum-input biggestNum-input-2" placeholder="Введіть число" type="text"></li>
-    <li><input class="biggestNum-input biggestNum-input-3" placeholder="Введіть число" type="text"></li>
+    <li><input class="biggestNum-input biggestNum-input-1" placeholder="Введіть число" type="number"></li>
+    <li><input class="biggestNum-input biggestNum-input-2" placeholder="Введіть число" type="number"></li>
+    <li><input class="biggestNum-input biggestNum-input-3" placeholder="Введіть число" type="number"></li>
 </ul>
 <p class="biggestNum-result">Найбільше число, яке ви ввели - (число)</p>
 <div class="biggestNum-underline"></div>
@@ -497,7 +497,7 @@
    <ul class="last-people">
    <li>
     <ul class="last-people-group">
-        <li><button class="last-human-button"><img class="last-human" src="https://static6.depositphotos.com/1001003/559/i/450/depositphotos_5598181-stock-illustration-isaac-newton.jpg" alt="Ісаак Ньютон"></button></li>
+        <li><button class="last-human-button last-human-button-1"><img class="last-human" src="https://static6.depositphotos.com/1001003/559/i/450/depositphotos_5598181-stock-illustration-isaac-newton.jpg" alt="Ісаак Ньютон"></button></li>
         <li><button class="last-human-button"><img class="last-human" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQEEw7e0uEqfH-31jevGZU4WKdknJruD50Xw&s" alt="Альберт Енштейн"></button></li>
         <li><button class="last-human-button"><img class="last-human" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxAPXFenobZPHJhgom_jVEutc2714zBlovkQ&s" alt="Нікола Тесла"></button></li>
         <li><button class="last-human-button"><img class="last-human" src="https://lpnu.ua/sites/default/files/2020/7/13/news/3053/golovnafotkakyuri.jpg" alt="Марія Склодовська-Кюрі"></button></li>
@@ -520,16 +520,18 @@
     </ul>
    </li>
    </ul>
+   <ul class="emptyUL"></ul>
    <ul class="last-buttons">
     <li class="last-buttons-li">
+        
         <ul  class="last-buttons-group">
             <li>
-                <button class="last-buttons-button">
+                <button id="button1" class="last-buttons-button">
                     <p>Які вчені народилися в 19 ст.</p>
                 </button>
             </li>
             <li>
-                <button class="last-buttons-button">
+                <button id="button2" class="last-buttons-button">
                     <p>Знайти рік народження Albert Einshtein</p>
                 </button>
             </li>
@@ -584,6 +586,7 @@
         </button>
     </li>
    </ul>
+
 </section>
     </main>
     <footer class="footer">
