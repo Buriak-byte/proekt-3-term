@@ -29,6 +29,139 @@ visokosnyiYearInput.addEventListener("input", (e) => {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const computerValue = document.querySelector(".computerValue");
+let counter = 0
+const Stone = document.querySelector(".stone-button");
+const Scissors = document.querySelector(".scissors-button");
+const Paper = document.querySelector(".paper-button");
+const counterText = document.querySelector(".KNP-Totalscore-num");
+const computerNum = document.querySelector(".computerSCORE-num");
+const userAnswer = document.querySelector(".KNP-yourSCORE-num");
+const resultOfGame = document.querySelector(".K-N-P-answer");
+const allAnswers = ["stone", "scissors", "paper"];
+function computerAnswerFUNCTION(answer) {
+  const computerChoise = Math.floor(Math.random() * 3);
+  const computerAnswer = allAnswers[computerChoise];
+  return computerAnswer;
+}
+
+Stone.addEventListener("click", (stoneClick) => {
+  const computerChoise = computerAnswerFUNCTION();
+  const userChoise = allAnswers[0];
+  if (computerChoise === allAnswers[2]) {
+
+    resultOfGame.textContent = "ви програли!!!";
+    resultOfGame.style.color = "#990000";
+computerNum += 1
+    computerWins.innerHTML = counterComputer;
+  }
+  if (computerChoise === allAnswers[1]) {
+    resultOfGame.textContent = "ви вийграли!!!";
+     resultOfGame.style.color = "#039900";
+    counter += 1;
+    usersWins.innerHTML = counterUser;
+  }
+  if (computerChoise === allAnswers[0]) {
+    resultOfGame.textContent = "нічия";
+      resultOfGame.style.color = "#d18500";
+  }
+});
+Scissors.addEventListener("click", (scissorsClick) => {
+  const computerChoise = computerAnswerFUNCTION();
+ 
+  const userChoise = allAnswers[1];
+  if (computerChoise === allAnswers[0]) {
+    computerValue.classList.add(computerValueTimer);
+     resultOfGame.textContent = "ви програли!!!";
+     resultOfGame.style.color = "#990000";
+     counter += 1;
+    computerWins.innerHTML = counterComputer;
+       computerValue.classList.remove(computerValueTimer);
+  }
+  if (computerChoise === allAnswers[2]) {
+       computerValue.classList.add(computerValueTimer);
+    resultOfGame.textContent = "ви вийграли!!!";
+      resultOfGame.style.color = "#039900";
+    counterUser += 1;
+    usersWins.innerHTML = counterUser;
+       computerValue.classList.remove(computerValueTimer);
+  }
+  if (computerChoise === allAnswers[1]) {
+       computerValue.classList.add(computerValueTimer);
+    resultOfGame.textContent = "нічия";
+          resultOfGame.style.color = "#d18500";
+             computerValue.classList.remove(computerValueTimer);
+  }
+});
+Paper.addEventListener("click", (paperClick) => {
+  const computerChoise = computerAnswerFUNCTION();
+ 
+  const userChoise = allAnswers[2];
+  if (computerChoise === allAnswers[2]) {
+       computerValue.classList.add(computerValueTimer);
+    resultOfGame.textContent = "нічия";
+    resultOfGame.style.color = "#d18500";
+       computerValue.classList.remove(computerValueTimer);
+  }
+  if (computerChoise === allAnswers[0]) {
+       computerValue.classList.add(computerValueTimer);
+    resultOfGame.textContent = "ви вийграли!!!";
+    resultOfGame.style.color = "#039900";
+    counter += 1;
+    usersWins.innerHTML = counterUser;
+       computerValue.classList.remove(computerValueTimer);
+  }
+  if (computerChoise === allAnswers[1]) {
+       computerValue.classList.add(computerValueTimer);
+     resultOfGame.textContent = "ви програли!!!";
+     resultOfGame.style.color = "#990000";
+     counter += 1;
+    computerWins.innerHTML = counterComputer;
+       computerValue.classList.remove(computerValueTimer);
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const calculatormegaUlinput1 = document.querySelector(
   ".calculator-megaUl-input1",
 );
@@ -97,6 +230,32 @@ dorivnue.addEventListener("click", (dorivnue) => {
 const timeCalculatorinput = document.querySelector(".timeCalculator-input");
 const timeCalculatortimer = document.querySelector(".timeCalculator-timer");
 console.log(timeCalculatorinput.value);
+if(timeCalculatorinput % 31536000){
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let computersNumber = Math.floor(Math.random() * 10);
 let userNumber = document.querySelector(".random-input");

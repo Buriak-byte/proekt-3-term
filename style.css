@@ -437,6 +437,52 @@ color: #990000;
 display: none;
 
 }
+@keyframes timerOfcomputerValue{
+    0%{
+        content: "варіант комп'ютера";
+    }
+    1%{
+        content: "3";
+    }
+      33%{
+        content: "2";
+    }
+      67%{
+        content: "1";
+    }
+    100%{
+        display: none;
+    }
+}
+.computerValueTimer{
+    animation: timerOfcomputerValue 3.5s ;
+}
+.computerValue{
+
+width: 200px;
+height: 50px;
+position: absolute;
+z-index: 10;
+top: 800px;
+left: 600px;
+background-color: #000000;
+color: white;
+}
+.KNP-Totalscore{
+    display: flex;
+}
+.KNP-computerSCORE{
+    display: flex;
+}
+.KNP-yourSCORE{
+    display: flex;
+}
+.score-position{
+    position: absolute;
+    top: 700px;
+    right: 500px;
+    z-index: 10;
+}
 .K-N-P-answer1{
     /* Комп’ютер виграв раунд! */
 
@@ -700,7 +746,7 @@ z-index: 10;
 
 left: 700px;
 }
-timeCalculator-timer{
+.timeCalculator-timer{
     /* 3 дн. 15:45:01 */
 
 position: absolute;

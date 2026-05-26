@@ -85,30 +85,45 @@
         <section class="K-N-P">
             <p class="K-N-P-zag">Камінь - ножиці - папір</p>
             <ul class="K-N-P-svgUl">
-                <li class="K-N-P-stone">
+                <button class="stone-button">
+                     <li class="K-N-P-stone">
                     <svg class="K-N-P-svgUl-li">
                         <use href="./SVGS/rock.svg"></use>
                     </svg>
                 </li>
+                </button>
+               <button class = "scissors-button">
                 <li class="K-N-P-scissors">
                     <svg class="K-N-P-svgUl-li K-N-P-svgUl-li2">
                         <use href="./SVGS/scissors.svg"></use>
                     </svg>
                 </li>
+                </button>
+                <button class="paper-button">
                 <li class="K-N-P-paper">
                     <svg class="K-N-P-svgUl-li K-N-P-svgUl-li2">
                         <use href="./SVGS/paper.svg"></use>
                     </svg>
                 </li>
+                </button>
             </ul>
-           <ul class="K-N-P-scoreUl">
+            <div class="score-position">
+          <ul class="KNP-Totalscore">
             <li>Рахунок:</li>
-            <li>Комп'ютер - 0</li>
-            <li>Ви - 0</li>
-           </ul>
-           <p class="K-N-P-answer1">Ви виграли раунд!</p>
-           <p class="K-N-P-answer2">Комп’ютер виграв раунд!</p>
-           <button class="K-N-P-button">Варіант комп’ютера</button>
+            <li  class="KNP-Totalscore-num">0</li>
+          </ul>
+          <ul class="KNP-computerSCORE">
+            <li>комп'ютер:</li>
+            <li  class="KNP-computerSCORE-num">0</li>
+          </ul>
+          <ul class="KNP-yourSCORE">
+            <li>Ви:</li>
+            <li   class="KNP-yourSCORE-num">0</li>
+          </ul>
+           
+           <p class="K-N-P-answer"></p>
+           </div>
+           <div class="computerValue">варіант комп'ютера</div>
                <div class="K-N-P-underline"></div>
         </section>
 
@@ -198,7 +213,17 @@
 </svg>
 <img class="timeCalculator-points" src="./PNGS/points.png" alt="пунктир">
         <div class="visokosnyi-year-underline"></div>
-<div class="timeCalculator-timer">aaaaaaaaa</div>
+<ul class="timecalculator-timer">
+    <li></li>
+    <li>:</li>
+    <li></li>
+    <li>:</li>
+    <li></li>
+    <li>:</li>
+    <li></li>
+    <li>:</li>
+    <li></li>
+</ul>
  <div class="timeCalculator-underline"></div>
         </section>
 
