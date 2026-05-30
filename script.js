@@ -538,6 +538,7 @@ const scientists = [
     born: 1643,
     dead: 1727,
     id: 2,
+    Img: "https://static6.depositphotos.com/1001003/559/i/450/depositphotos_5598181-stock-illustration-isaac-newton.jpg",
   },
   {
     name: "Galileo",
@@ -545,6 +546,7 @@ const scientists = [
     born: 1564,
     dead: 1642,
     id: 3,
+    Img: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Galileo.arp.300pix.jpg",
   },
   {
     name: "Marie",
@@ -552,6 +554,7 @@ const scientists = [
     born: 1867,
     dead: 1934,
     id: 4,
+    Img: "https://upload.wikimedia.org/wikipedia/commons/7/77/Marie_Curie_%281900%29_%28cropped%29.jpg",
   },
   {
     name: "Johannes",
@@ -559,6 +562,7 @@ const scientists = [
     born: 1571,
     dead: 1630,
     id: 5,
+    Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuRDRkbekHHxXWF7u-HOxZBjUAl55iVcNCBg&s",
   },
   {
     name: "Nicolaus",
@@ -566,6 +570,7 @@ const scientists = [
     born: 1473,
     dead: 1543,
     id: 6,
+    Img: "https://upload.wikimedia.org/wikipedia/commons/f/f2/Nikolaus_Kopernikus.jpg",
   },
   {
     name: "Max",
@@ -573,6 +578,7 @@ const scientists = [
     born: 1858,
     dead: 1947,
     id: 7,
+    Img: "https://upload.wikimedia.org/wikipedia/commons/c/c7/Max_Planck_1933.jpg",
   },
   {
     name: "Albert",
@@ -580,6 +586,7 @@ const scientists = [
     born: 1879,
     dead: 1955,
     id: 1,
+    Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQEEw7e0uEqfH-31jevGZU4WKdknJruD50Xw&s",
   },
   {
     name: "Katherine",
@@ -587,6 +594,7 @@ const scientists = [
     born: 1898,
     dead: 1979,
     id: 8,
+    Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQAYsC9vk6W-jA7pZUzpwDr0Wh7CzBRFuArg&s",
   },
   {
     name: "Ada",
@@ -594,6 +602,7 @@ const scientists = [
     born: 1815,
     dead: 1852,
     id: 9,
+    Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrL8tbYJ4igOpwnE9Tmd5xgca6n_Utylgjxg&s",
   },
   {
     name: "Sarah E.",
@@ -601,6 +610,7 @@ const scientists = [
     born: 1855,
     dead: 1905,
     id: 10,
+    Img: "https://upload.wikimedia.org/wikipedia/commons/b/b8/Sarah_Goode_t580.png",
   },
   {
     name: "Lise",
@@ -608,6 +618,7 @@ const scientists = [
     born: 1878,
     dead: 1968,
     id: 11,
+    Img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJL6h_cm-zFnR0NHTcCpk8jZouKzMPsanoiQ&s",
   },
   {
     name: "Hanna",
@@ -615,46 +626,67 @@ const scientists = [
     born: 1829,
     dead: 1909,
     id: 12,
+    Img: "https://upload.wikimedia.org/wikipedia/commons/d/d2/Hanna_Hammarstr%C3%B6m.jpg",
   },
 ];
 function createli(scientists){
+  emptyUL.innerHTML = "";
 scientists.forEach((scientist, index, array) => {
   const createli = document.createElement("li")
+   const increateliimg = document.createElement("img");
   const increateliname = document.createElement("p")
     const increatelilife = document.createElement("p");
+   
+    increateliimg.src = scientist.Img
+    increateliimg.style.width = "100px";
+     increateliimg.style.height = "100px";
     increateliname.textContent = `${scientist.name} ${scientist.surname}`
      increatelilife.textContent = `${scientist.born}-${scientist.dead}`;
      createli.classList.add("createli")
-     createli.append(increateliname, increatelilife)
+     createli.append(increateliimg, increateliname, increatelilife);
      emptyUL.append(createli)
 })
 }
+
 const emptyUL = document.querySelector(".emptyUL")
 const button1 = document.querySelector("#button1");
 button1.addEventListener("click", bornIn19ST);
-function bornIn19ST(i) {
+function bornIn19ST() {
   const whobornIn19ST = scientists.filter((human) => {
     return 1800 <= human.born && human.born <= 1900;
   });
   createli(whobornIn19ST);
 }
-console.log(bornIn19ST(scientists));
-function orderYears(scientists) {
-  const orderYearsArr = scientists.sort((a, b) => {
+
+
+const button2 = document.querySelector("#button2");
+console.log(button2)
+button2.addEventListener("click", orderYears);
+function orderYears() {
+  const orderYearsArrA = scientists.sort((a, b) => {
     const lifeYearsA = a.dead - a.born;
     const lifeYearsB = b.dead - b.born;
     return lifeYearsA - lifeYearsB;
   });
-  return orderYearsArr;
+  createli(orderYearsArrA);
 }
-console.log(orderYears(scientists));
-function futureborned(scientists) {
-  const orderYearsArr = scientists.sort((a, b) => {
+
+
+
+
+const button4 = document.querySelector("#button4");
+button4.addEventListener("click", futureborned);
+function futureborned() {
+  const orderYearsArrB = scientists.sort((a, b) => {
     return b.born - a.born;
   });
-  return orderYearsArr[0];
+ createli([orderYearsArrB[0]])
+ console.log(orderYearsArrB)
 }
-console.log(futureborned(scientists));
+
+
+
+
 function yearsOfAlbertEnstein(scientists) {
   const AlbertEnsteinYears = scientists.find((AlbertEnstein) => {
     return AlbertEnstein.born === 1879;

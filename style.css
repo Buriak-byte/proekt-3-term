@@ -1219,6 +1219,13 @@ position: static;
     top: 2900px;
     left: 460px;
 }
+.emptyUL{
+    position: relative;
+    z-index: 10;
+}
+.last-buttons-group{
+    z-index: 10;
+}
 .last-people ul>li>ul:not(:first-child){
    margin-top: 36px;
 }
