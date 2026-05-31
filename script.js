@@ -659,9 +659,9 @@ function bornIn19ST() {
 }
 
 
-const button2 = document.querySelector("#button2");
-console.log(button2)
-button2.addEventListener("click", orderYears);
+const button3 = document.querySelector("#button3");
+
+button3.addEventListener("click", orderYears);
 function orderYears() {
   const orderYearsArrA = scientists.sort((a, b) => {
     const lifeYearsA = a.dead - a.born;
@@ -683,55 +683,89 @@ function futureborned() {
  createli([orderYearsArrB[0]])
  console.log(orderYearsArrB)
 }
+const button2 = document.querySelector("#button2");
+button2.addEventListener("click", sortByAlfabet);
+function sortByAlfabet(){
+  const sorted = scientists.sort((a, b) => {
+    return a.surname.localeCompare(b.surname)
+    
+  })
+createli(sorted);
+}
 
-
-
-
-function yearsOfAlbertEnstein(scientists) {
-  const AlbertEnsteinYears = scientists.find((AlbertEnstein) => {
-    return AlbertEnstein.born === 1879;
+const button5 = document.querySelector("#button5")
+button5.addEventListener("click", yearsOfAlbertEnstein)
+function yearsOfAlbertEnstein() {
+  const AlbertEnsteinYears = scientists.find((scientist) => {
+    return scientist.born === 1879;
   });
-  return AlbertEnsteinYears.born;
+  createli([AlbertEnsteinYears]); // ← [] навколо
 }
-console.log(yearsOfAlbertEnstein(scientists));
 
-function StartC(scientists) {
-  return scientists.filter((scientist) => {
-    return scientist.surname.startsWith("C");
+const button6 = document.querySelector("#button6");
+button6.addEventListener("click", StartC);
+function StartC() {
+  const chelC = scientists.filter((chel) => {
+    return chel.name.startsWith("C") || chel.surname.startsWith("C")
+  })
+  createli(chelC)
+  console.log(chelC)
+}
+
+const button7 = document.querySelector("#button7");
+button7.addEventListener("click", noA);
+function noA() {
+  const filteredScientists = scientists.filter((scientist) => {
+    return (
+      !scientist.name.startsWith("A") && !scientist.surname.startsWith("A")
+    );
   });
+  createli(filteredScientists);
 }
 
-console.log(StartC(scientists));
-// function StartC(scientists) {
-//   scientists.filter((scientist) => {
-//    return scientist.surname.includes("C")
-//   });
-//   return StartC
-// }
-// console.log(StartC(scientists))
-function deleteA(scientists) {
-  const UNdeletedscientists = scientists.filter((UNdelited) => {
-    return !UNdelited.name.startsWith("A");
+
+const button8 = document.querySelector("#wbutton8")
+button8.addEventListener("click", timeOfLife)
+function timeOfLife() {
+  const sorted = [...scientists].sort((a, b) => {
+    return a.dead - a.born - (b.dead - b.born);
   });
-  return UNdeletedscientists;
+  createli([sorted[0], sorted[sorted.length - 1]]);
 }
-console.log(deleteA(scientists));
 
-const scientistsBorningConstA = scientists.sort((a, b) => {
-  return a.born - b.born;
-});
-const scientistsBorningConstB = scientists.sort((a, b) => {
-  return b.born - a.born;
-});
 
-function scientistsBorning(scientists, minusA, minusB) {
-  return (scientistsBorningConstA[0], scientistsBorningConstB[0]);
-}
-console.log(
-  scientistsBorning(
-    scientists,
-    scientistsBorning.minusA,
-    scientistsBorning.minusB,
-  ),
-);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// (() => {
+//   const refs = {
+//     openModalBtn: document.querySelector("[data-modal-open]"),
+//     closeModalBtn: document.querySelector("[data-modal-close]"),
+//     modal: document.querySelector("[data-modal]"),
+//   };
+
+//   refs.openModalBtn.addEventListener("click", toggleModal);
+//   refs.closeModalBtn.addEventListener("click", toggleModal);
+
+//   function toggleModal() {
+//     refs.modal.classList.toggle("is-hidden");
+//     document.body.classList.toggle("no-scroll");
+//   }
+// })();
