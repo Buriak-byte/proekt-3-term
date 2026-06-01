@@ -724,7 +724,7 @@ function noA() {
 }
 
 
-const button8 = document.querySelector("#wbutton8")
+const button8 = document.querySelector("#button8")
 button8.addEventListener("click", timeOfLife)
 function timeOfLife() {
   const sorted = [...scientists].sort((a, b) => {
@@ -736,8 +736,14 @@ function timeOfLife() {
 
 
 
-
-
+const button9 = document.querySelector("#button9")
+button9.addEventListener("click", izgoy)
+function izgoy(){
+  const sameLettersConst = scientists.filter((sameLetters) => {
+   return sameLetters.name.startsWith(String) === sameLetters.surname.startsWith(String)
+  })
+  createli(sameLettersConst)
+}
 
 
 
