@@ -44,24 +44,27 @@ visokosnyiYearInput.addEventListener("input", (e) => {
 
 
 
-
+const KNPImg = document.querySelector(".K-N-P-img");
 const getStoneBtn = document.querySelector(".K-N-P-stone");
 const getScissorsBtn = document.querySelector(".K-N-P-scissors");
 const getPaperBtn = document.querySelector(".K-N-P-paper");
 const resultOfGame = document.querySelector(".K-N-P-answer");
-const computerAnswer = document.querySelector(".computerValue");
+const computerAnswer1 = document.querySelector(".computerValue");
 const computerWins = document.querySelector(".KNP-computerSCORE-num");
 const usersWins = document.querySelector(".KNP-yourSCORE-num");
 
 const allAnswers = ["stone", "scissors", "paper"];
 const allAnswersIMGS = {
-  stoneIMG: "./SVGS/rock.svg",
-  scissorsIMG: "./SVGS/scissors.svg",
-  paperIMG: "./SVGS/paper.svg",
+  stone: "./SVGS/rock.svg",
+  scissors: "./SVGS/scissors.svg",
+  paper: "./SVGS/paper.svg",
 };
 function randomAnswer(answer) {
   const computerChoise = Math.floor(Math.random() * 3);
   const computerAnswer = allAnswers[computerChoise];
+  const a = document.createElement("img")
+a.src = allAnswersIMGS[computerAnswer]
+KNPImg.innerHTML = a;
   return computerAnswer;
 }
 
