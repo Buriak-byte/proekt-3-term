@@ -892,14 +892,21 @@ animation-iteration-count: infinite;
 .football {
   position: relative;
 }
+.football-field {
+  position: relative; /* основа для позиціювання всередині нього */
+}
+.football-ball, .football-cursor {
+  position: absolute; /* щоб можна було регулювати left і top */
+}
+
 .football-zag{
     
 z-index: 10;
-position: absolute;
+position: relative;
 width: 74px;
 height: 20px;
 left: 700px;
-top: 1850px;
+bottom: 1900px;
 
 font-family: 'Montserrat Alternates';
 font-style: normal;
@@ -1434,12 +1441,12 @@ background-color: #000000;
 color: white;
 }
 .football-field {
-    position: absolute;
+    position: relative;
     z-index: 10;
     width: 720px;
     height: 220px;
     left: 390px;
-    top: 1880px;
+ bottom: 1800px;
     background-color: #5ABB58;
     border-radius: 37px;
 }

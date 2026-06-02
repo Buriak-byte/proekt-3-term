@@ -45,101 +45,94 @@ visokosnyiYearInput.addEventListener("input", (e) => {
 
 
 
-const computerValue = document.querySelector(".computerValue");
-let counter = 0
-const Stone = document.querySelector(".stone-button");
-const Scissors = document.querySelector(".scissors-button");
-const Paper = document.querySelector(".paper-button");
-const counterText = document.querySelector(".KNP-Totalscore-num");
-const computerNum = document.querySelector(".computerSCORE-num");
-const userAnswer = document.querySelector(".KNP-yourSCORE-num");
+const getStoneBtn = document.querySelector(".K-N-P-stone");
+const getScissorsBtn = document.querySelector(".K-N-P-scissors");
+const getPaperBtn = document.querySelector(".K-N-P-paper");
 const resultOfGame = document.querySelector(".K-N-P-answer");
+const computerAnswer = document.querySelector(".computerValue");
+const computerWins = document.querySelector(".KNP-computerSCORE-num");
+const usersWins = document.querySelector(".KNP-yourSCORE-num");
+
 const allAnswers = ["stone", "scissors", "paper"];
-function computerAnswerFUNCTION(answer) {
+const allAnswersIMGS = {
+  stoneIMG: "./SVGS/rock.svg",
+  scissorsIMG: "./SVGS/scissors.svg",
+  paperIMG: "./SVGS/paper.svg",
+};
+function randomAnswer(answer) {
   const computerChoise = Math.floor(Math.random() * 3);
   const computerAnswer = allAnswers[computerChoise];
   return computerAnswer;
 }
 
-Stone.addEventListener("click", (stoneClick) => {
-  const computerChoise = computerAnswerFUNCTION();
-  const userChoise = allAnswers[0];
-  if (computerChoise === allAnswers[2]) {
+let counterUser = 0;
+let counterComputer = 0;
 
-    resultOfGame.textContent = "ви програли!!!";
-    resultOfGame.style.color = "#990000";
-computerNum += 1
+getStoneBtn.addEventListener("click", (event) => {
+  const computerChoise = randomAnswer();
+  console.log(computerChoise);
+  const userChoise = allAnswers[0];
+  
+  if (computerChoise === allAnswers[2]) {
+    resultOfGame.textContent = "ви програли!";
+resultOfGame.style.color = "#990000";
+    counterComputer += 1;
     computerWins.innerHTML = counterComputer;
   }
   if (computerChoise === allAnswers[1]) {
-    resultOfGame.textContent = "ви вийграли!!!";
-     resultOfGame.style.color = "#039900";
-    counter += 1;
+    resultOfGame.textContent = "ви вийграли!";
+    resultOfGame.style.color = "#039900";
+    counterUser += 1;
     usersWins.innerHTML = counterUser;
   }
   if (computerChoise === allAnswers[0]) {
     resultOfGame.textContent = "нічия";
-      resultOfGame.style.color = "#d18500";
+    resultOfGame.style.color = "#ffd500"
   }
 });
-Scissors.addEventListener("click", (scissorsClick) => {
-  const computerChoise = computerAnswerFUNCTION();
- 
+getScissorsBtn.addEventListener("click", (event) => {
+  const computerChoise = randomAnswer();
+  console.log(computerChoise);
   const userChoise = allAnswers[1];
   if (computerChoise === allAnswers[0]) {
-    computerValue.classList.add(computerValueTimer);
-     resultOfGame.textContent = "ви програли!!!";
-     resultOfGame.style.color = "#990000";
-     counter += 1;
+
+   resultOfGame.textContent = "ви програли!";
+   resultOfGame.style.color = "#990000";
+    counterComputer += 1;
     computerWins.innerHTML = counterComputer;
-       computerValue.classList.remove(computerValueTimer);
   }
   if (computerChoise === allAnswers[2]) {
-       computerValue.classList.add(computerValueTimer);
-    resultOfGame.textContent = "ви вийграли!!!";
+     resultOfGame.textContent = "ви вийграли!";
+     resultOfGame.style.color = "#039900";
+    counterUser += 1;
+    usersWins.innerHTML = counterUser;
+  }
+  if (computerChoise === allAnswers[1]) {
+     resultOfGame.textContent = "нічия";
+     resultOfGame.style.color = "#ffd500";
+  }
+});
+getPaperBtn.addEventListener("click", (event) => {
+  const computerChoise = randomAnswer();
+  console.log(computerChoise);
+  const userChoise = allAnswers[2];
+  if (computerChoise === allAnswers[2]) {
+    resultOfGame.textContent = "нічия";
+    resultOfGame.style.color = "#ffd500";
+  }
+  if (computerChoise === allAnswers[0]) {
+      resultOfGame.textContent = "ви вийграли!";
       resultOfGame.style.color = "#039900";
     counterUser += 1;
     usersWins.innerHTML = counterUser;
-       computerValue.classList.remove(computerValueTimer);
   }
   if (computerChoise === allAnswers[1]) {
-       computerValue.classList.add(computerValueTimer);
-    resultOfGame.textContent = "нічия";
-          resultOfGame.style.color = "#d18500";
-             computerValue.classList.remove(computerValueTimer);
-  }
-});
-Paper.addEventListener("click", (paperClick) => {
-  const computerChoise = computerAnswerFUNCTION();
- 
-  const userChoise = allAnswers[2];
-  if (computerChoise === allAnswers[2]) {
-       computerValue.classList.add(computerValueTimer);
-    resultOfGame.textContent = "нічия";
-    resultOfGame.style.color = "#d18500";
-       computerValue.classList.remove(computerValueTimer);
-  }
-  if (computerChoise === allAnswers[0]) {
-       computerValue.classList.add(computerValueTimer);
-    resultOfGame.textContent = "ви вийграли!!!";
-    resultOfGame.style.color = "#039900";
-    counter += 1;
-    usersWins.innerHTML = counterUser;
-       computerValue.classList.remove(computerValueTimer);
-  }
-  if (computerChoise === allAnswers[1]) {
-       computerValue.classList.add(computerValueTimer);
-     resultOfGame.textContent = "ви програли!!!";
-     resultOfGame.style.color = "#990000";
-     counter += 1;
+    resultOfGame.textContent = "ви програли!";
+    resultOfGame.style.color = "#990000";
+    counterComputer += 1;
     computerWins.innerHTML = counterComputer;
-       computerValue.classList.remove(computerValueTimer);
   }
 });
-
-
-
-
 
 
 
@@ -442,6 +435,9 @@ function hitofhitbox() {
   }
 }
 
+
+
+
 const footballballBUTTON = document.querySelector(".football-ball-BUTTON");
 let ballFocusLet = false;
 let startFootball = false;
@@ -449,16 +445,16 @@ let antiBAGfootball = false;
 const field = document.querySelector(".football-field");
 let cursorIMG = document.querySelector(".football-cursor");
 const ball = document.querySelector(".football-ball");
-
-field.addEventListener("click", (cursorFocus) => {
+field.addEventListener("mousemove", (cursorFocus) => {
   cursorIMG.style.left = cursorFocus.offsetX - 11 + "px";
-  cursorIMG.style.top = cursorFocus.offsetY - 11 + "px";
-  ball.style.left = cursorFocus.offsetX - 25 + "px";
-  ball.style.top = cursorFocus.offsetY - 25 + "px";
-  // cursorIMG.addEventListener("mousemove", (cursoreMove) => {
-  //     cursorIMG.style.left = cursoreMove.offsetX - 11 + "px";
-  //     cursorIMG.style.top = cursoreMove.offsetY - 11 + "px";
-  // })
+  cursorIMG.style.top = cursorFocus.offsetY - 11 + "px"
+
+});
+field.addEventListener("click", (ballFocus) => {
+  
+  ball.style.left = ballFocus.offsetX - 25 + "px";
+  ball.style.top = ballFocus.offsetY - 25 + "px";
+  
 });
 // footballballBUTTON.addEventListener("mousemove", (ballfocus) => {
 //   ballFocusLet === true;
@@ -739,11 +735,13 @@ function timeOfLife() {
 const button9 = document.querySelector("#button9")
 button9.addEventListener("click", izgoy)
 function izgoy(){
-  const sameLettersConst = scientists.filter((sameLetters) => {
-   return sameLetters.name.startsWith(String) === sameLetters.surname.startsWith(String)
-  })
-  createli(sameLettersConst)
+  const filteredScientists = scientists.filter(
+    ({ name, surname }) =>
+      name && surname && name[0].toLowerCase() === surname[0].toLowerCase(),
+  );
+  createli(filteredScientists)
 }
+
 
 
 
