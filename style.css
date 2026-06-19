@@ -417,7 +417,12 @@ line-height: 170%;
 
 color: #000000;
 
-
+.K-N-P-img{
+    z-index: 10;
+    position: absolute;
+    top: 1000px;
+    left: 700px;
+}
 }
 .K-N-P-answer2{
     /* Комп’ютер виграв раунд! */
